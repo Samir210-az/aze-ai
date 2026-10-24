@@ -108,4 +108,40 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/psixologiya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/psixologiya"/>
   </url>
+  <url>
+    <loc>https://aze-ai.az/teqdimat</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/teqdimat"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/ru/teqdimat</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/teqdimat"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/teqdimat</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/teqdimat"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/tr/teqdimat</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/teqdimat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/teqdimat"/>
+  </url>
 </urlset>
