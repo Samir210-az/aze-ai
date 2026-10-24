@@ -34,7 +34,7 @@
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
-  --void:#04140f; --white:#fff; --ash:#9a9a9a; --silver:#bdbdbd;
+  --void:#04140f; --white:#fff; --ash:#b9c1bd; --silver:#dbe1de;
   --iris:#8052ff; --saffron:#ffb829; --verdant:#15846e;
   --teal:#2fc5aa; --magenta:#e45bd3; --blue:#4d8dff;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -43,7 +43,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;color-scheme:dark;overflow-x:clip;background:var(--void)}
-body{background:var(--void);color:var(--white);font-family:var(--font);font-weight:200;font-size:18px;line-height:1.5;font-feature-settings:"ss01" 1;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{background:var(--void);color:var(--white);font-family:var(--font);font-weight:300;font-size:18px;line-height:1.5;font-feature-settings:"ss01" 1;-webkit-font-smoothing:antialiased;overflow-x:clip}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 :focus-visible{outline:2px solid var(--saffron);outline-offset:4px;border-radius:6px}
@@ -106,10 +106,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .gains{list-style:none;margin:clamp(30px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .gains li{padding:26px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(7,22,17,.5)}
 .gains h4{font-size:clamp(24px,2.4vw,30px);font-weight:400;letter-spacing:-.03em;margin:0 0 12px;color:var(--saffron)}
-.gains p{margin:0;font-size:15px;line-height:1.55;color:var(--ash)}
-.sectors{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(26px,4vw,44px)}
-.sectors button{font:inherit;font-size:15px;color:var(--white);background:rgba(7,22,17,.55);border:1px solid rgba(255,255,255,.16);padding:12px 20px;border-radius:999px;cursor:pointer;transition:background .25s,border-color .25s,transform .25s}
-.sectors button:hover{background:rgba(128,82,255,.28);border-color:var(--iris);transform:translateY(-2px)}
+.gains p{margin:0;font-size:16px;line-height:1.55;color:var(--ash)}
 @media(max-width:980px){.gains{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.pains{grid-template-columns:1fr}}
 @media(max-width:560px){.gains{grid-template-columns:1fr}}
@@ -208,7 +205,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .svc{list-style:none;margin:clamp(40px,6vw,80px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .svc li{padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(7,22,17,.5)}
 .svc h4{font-size:18px;font-weight:600;margin:0 0 10px;letter-spacing:-.01em}
-.svc p{margin:0;font-size:14.5px;line-height:1.55;color:var(--ash)}
+.svc p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ash)}
 @media(max-width:980px){.svc{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.svc{grid-template-columns:1fr}}
 .cta-grid{display:grid;grid-template-columns:1fr minmax(320px,460px);gap:clamp(32px,6vw,90px);align-items:center}
@@ -350,12 +347,6 @@ footer a.sg:hover{color:var(--white)}
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="h-sec" style="padding-top:0">
-    <div class="wrap">
-      <div class="rv"><span class="label">Alanlar</span><h2 id="h-sec">Alanınızı seçin, sizin için ne yazabileceğimizi söyleyelim.</h2></div>
-      <div class="sectors rv"><button type="button" data-q="Merhaba, «Sağlık» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Sağlık</button><button type="button" data-q="Merhaba, «Gayrimenkul» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Gayrimenkul</button><button type="button" data-q="Merhaba, «Eğitim» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Eğitim</button><button type="button" data-q="Merhaba, «Yeme-içme» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Yeme-içme</button><button type="button" data-q="Merhaba, «Otomotiv» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Otomotiv</button><button type="button" data-q="Merhaba, «Ticaret» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Ticaret</button><button type="button" data-q="Merhaba, «Hukuk» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Hukuk</button><button type="button" data-q="Merhaba, «Psikoloji merkezi» alanında çalışıyorum. Benim için hangi programı yazabilirsiniz?">Psikoloji merkezi</button></div>
-    </div>
-  </section>
 
   <section id="baslayaq" class="sec" aria-labelledby="h-st" style="padding-top:0">
     <div class="wrap">
@@ -585,14 +576,6 @@ footer a.sg:hover{color:var(--white)}
     });
   });
 
-  document.querySelectorAll('.sectors [data-q]').forEach(function(b){
-    b.addEventListener('click',function(){
-      var ta=document.querySelector('[data-chat] textarea'); if (!ta) return;
-      ta.value=b.dataset.q; ta.dispatchEvent(new Event('input'));
-      document.getElementById('elaqe').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
-      setTimeout(function(){ ta.focus({preventScroll:true}); },500);
-    });
-  });
   document.addEventListener('click',function(e){ document.querySelectorAll('details.lang[open]').forEach(function(d){ if (!d.contains(e.target)) d.removeAttribute('open'); }); });
 
   (function ambient(){
