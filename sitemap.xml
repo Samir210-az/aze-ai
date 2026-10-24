@@ -1,15 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aze-ai.az/</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/ru/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/tr/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/"/>
   </url>
   <url>
     <loc>https://aze-ai.az/biznes</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/biznes"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/biznes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/biznes"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/biznes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/biznes"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/ru/biznes</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/biznes"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/biznes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/biznes"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/biznes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/biznes"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/biznes</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/biznes"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/biznes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/biznes"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/biznes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/biznes"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/tr/biznes</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/biznes"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/biznes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/biznes"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/biznes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/biznes"/>
   </url>
   <url>
     <loc>https://aze-ai.az/psixologiya</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/psixologiya"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/ru/psixologiya</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/psixologiya"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/psixologiya</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/psixologiya"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/tr/psixologiya</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/psixologiya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/psixologiya"/>
   </url>
 </urlset>
