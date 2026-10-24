@@ -162,6 +162,12 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .cta-sec{padding-block:clamp(80px,12vw,170px);text-align:left}
 .cta-sec h2{max-width:14em;margin-bottom:30px}
 .cta-sec p{max-width:440px;margin-bottom:36px}
+.svc{list-style:none;margin:clamp(40px,6vw,80px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc li{padding:24px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(7,22,17,.5)}
+.svc h4{font-size:18px;font-weight:600;margin:0 0 10px;letter-spacing:-.01em}
+.svc p{margin:0;font-size:14.5px;line-height:1.55;color:var(--ash)}
+@media(max-width:980px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.svc{grid-template-columns:1fr}}
 .cta-grid{display:grid;grid-template-columns:1fr minmax(320px,460px);gap:clamp(32px,6vw,90px);align-items:center}
 .cta-grid p{margin-bottom:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -285,10 +291,18 @@ footer a.sg:hover{color:var(--white)}
       </div>
       <div class="text rv">
         <span class="label">Biz kimik</span>
-        <h2 id="h-def">Hər sahənin öz dəftəri var.</h2>
-        <p>Security Group Bakıda proqram hazırlayan markadır. Hər proqram konkret sahənin gündəlik işindən çıxış edir: klinikada növbə, icarə şirkətində təhvil-təslim aktı, toyxanada tarix toqquşması, psixoloq üçün hesabat.</p>
-        <p>Hər şeyə yarayan bir sistem yox, işi tanıyan ayrıca alətlər yazırıq. Hazırda iki istiqamətdə işləyirik.</p>
+        <h2 id="h-def">Biznesi rəqəmsallaşdırırıq.</h2>
+        <p>Security Group Bakıda proqram təminatı və veb tətbiqlər hazırlayır. Dəftərdə, Excel-də və ya mesajlaşmada aparılan işi sizin sahənin gündəlik qaydalarına uyğun proqrama köçürürük: klinikada növbə, icarə şirkətində təhvil-təslim aktı, toyxanada tarix toqquşması, psixoloq üçün hesabat.</p>
+        <p>Hər şeyə yarayan bir sistem yox, işi tanıyan ayrıca alətlər yazırıq. Lazım olan yerdə süni intellektdən də istifadə edirik.</p>
       </div>
+    </div>
+    <div class="wrap">
+      <ul class="svc rv" aria-label="Xidmətlər">
+        <li><h4>Biznesin rəqəmsallaşdırılması</h4><p>Hazırkı iş qaydasını öyrənib hansı hissənin proqramla daha tez getdiyini birlikdə müəyyən edirik.</p></li>
+        <li><h4>Proqram təminatı</h4><p>CRM, uçot, rezervasiya və idarəetmə proqramları: sizin sahəyə və hesabatlara görə hazırlanır.</p></li>
+        <li><h4>Veb tətbiqlərin hazırlanması</h4><p>Telefonda və kompüterdə brauzerdən açılan tətbiqlər, giriş və rollarla.</p></li>
+        <li><h4>AI dəstəkli həllər</h4><p>Sənəd və tender təhlili, WhatsApp-da müştəriyə cavab, mətn və hesabat hazırlanması.</p></li>
+      </ul>
     </div>
   </section>
 
