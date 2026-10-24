@@ -89,10 +89,10 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .lang a:hover{background:rgba(255,255,255,.07);color:var(--white)}
 .lang a[aria-current="true"]{color:var(--saffron)}
 html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:clamp(40px,6.1vw,92px)}
-.top-about{position:relative;overflow:hidden;padding:clamp(120px,16vw,190px) 0 clamp(60px,9vw,110px)}
-.top-about .field.bg{position:relative;margin:clamp(10px,3vw,30px) calc(var(--pad)*-.6) clamp(20px,4vw,40px);pointer-events:none}
+.top-about{position:relative;overflow:hidden;padding:clamp(96px,12vw,150px) 0 clamp(60px,9vw,110px)}
+.top-about .field.bg{position:relative;margin:-9vw calc(var(--pad)*-.6) -5vw;pointer-events:none}
 .top-about .wrap{position:relative}
-@media(min-width:900px){.top-about .field.bg{margin-top:-11vw}}
+@media(min-width:900px){.top-about .field.bg{margin-top:-17vw;margin-bottom:-8vw}}
 .top-about .text{max-width:none;text-shadow:0 0 18px rgba(4,20,15,.9),0 0 4px rgba(4,20,15,.8)}
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
@@ -323,6 +323,7 @@ footer a.sg:hover{color:var(--white)}
 
   <section class="top-about" aria-labelledby="h1">
     <div class="wrap about">
+      <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".62" data-scale="1.3" data-n="3400" aria-hidden="true"><canvas></canvas></div>
       <div class="text">
         <p class="stat" style="margin:0 0 34px"><b><i data-count="50">50</i>+</b><span>programs built</span></p>
         <span class="label">Who we are</span>
@@ -334,7 +335,6 @@ footer a.sg:hover{color:var(--white)}
           <a class="ghost" href="/en/biznes">See examples</a>
         </div>
       </div>
-      <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".62" data-scale="1.3" data-n="3400" aria-hidden="true"><canvas></canvas></div>
       <ul class="svc rv" aria-label="Services"><li><h4>Business digitisation</h4><p>We look at how the work runs: who does what and how the report is produced. Then we choose together which part goes faster and with fewer errors in software.</p></li><li><h4>Software development</h4><p>Accounting, customer base, orders and reports. Each program is built around the rules and roles of your field.</p></li><li><h4>Web application development</h4><p>Opens in a browser on phone and computer, nothing to install. Every employee has their own sign-in and permissions, and data is kept in one place.</p></li><li><h4>AI-powered solutions</h4><p>Solutions that read and analyse documents and data and prepare reports and texts. AI does not replace staff, it takes over the part that consumes time.</p></li></ul>
     </div>
   </section>

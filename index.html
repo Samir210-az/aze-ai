@@ -89,10 +89,10 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .lang a:hover{background:rgba(255,255,255,.07);color:var(--white)}
 .lang a[aria-current="true"]{color:var(--saffron)}
 html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:clamp(40px,6.1vw,92px)}
-.top-about{position:relative;overflow:hidden;padding:clamp(120px,16vw,190px) 0 clamp(60px,9vw,110px)}
-.top-about .field.bg{position:relative;margin:clamp(10px,3vw,30px) calc(var(--pad)*-.6) clamp(20px,4vw,40px);pointer-events:none}
+.top-about{position:relative;overflow:hidden;padding:clamp(96px,12vw,150px) 0 clamp(60px,9vw,110px)}
+.top-about .field.bg{position:relative;margin:-9vw calc(var(--pad)*-.6) -5vw;pointer-events:none}
 .top-about .wrap{position:relative}
-@media(min-width:900px){.top-about .field.bg{margin-top:-11vw}}
+@media(min-width:900px){.top-about .field.bg{margin-top:-17vw;margin-bottom:-8vw}}
 .top-about .text{max-width:none;text-shadow:0 0 18px rgba(4,20,15,.9),0 0 4px rgba(4,20,15,.8)}
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
@@ -323,6 +323,7 @@ footer a.sg:hover{color:var(--white)}
 
   <section class="top-about" aria-labelledby="h1">
     <div class="wrap about">
+      <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".62" data-scale="1.3" data-n="3400" aria-hidden="true"><canvas></canvas></div>
       <div class="text">
         <p class="stat" style="margin:0 0 34px"><b><i data-count="50">50</i>+</b><span>hazırlanmış proqram</span></p>
         <span class="label">Biz kimik</span>
@@ -334,7 +335,6 @@ footer a.sg:hover{color:var(--white)}
           <a class="ghost" href="/biznes">Nümunələrə baxın</a>
         </div>
       </div>
-      <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".62" data-scale="1.3" data-n="3400" aria-hidden="true"><canvas></canvas></div>
       <ul class="svc rv" aria-label="Xidmətlər"><li><h4>Biznesin rəqəmsallaşdırılması</h4><p>İşin necə getdiyinə baxırıq: kim nə edir, hesabat necə çıxır. Sonra hansı hissənin proqramla daha tez və səhvsiz getdiyini birlikdə seçirik.</p></li><li><h4>Proqram təminatı</h4><p>Uçot, müştəri bazası, sifariş və hesabat proqramları. Hər biri sizin sahənin qaydalarına və rollarına görə qurulur.</p></li><li><h4>Veb tətbiqlərin hazırlanması</h4><p>Telefonda və kompüterdə brauzerdən açılır, yükləmək lazım deyil. Hər işçinin öz girişi və öz səlahiyyəti olur, məlumat bir yerdə saxlanılır.</p></li><li><h4>AI dəstəkli həllər</h4><p>Sənəd və məlumatı oxuyub təhlil edən, hesabat və mətn hazırlayan həllər. AI işçini əvəz etmir, vaxt aparan hissəni götürür.</p></li></ul>
     </div>
   </section>

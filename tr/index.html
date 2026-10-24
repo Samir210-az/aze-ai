@@ -89,10 +89,10 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .lang a:hover{background:rgba(255,255,255,.07);color:var(--white)}
 .lang a[aria-current="true"]{color:var(--saffron)}
 html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:clamp(40px,6.1vw,92px)}
-.top-about{position:relative;overflow:hidden;padding:clamp(120px,16vw,190px) 0 clamp(60px,9vw,110px)}
-.top-about .field.bg{position:relative;margin:clamp(10px,3vw,30px) calc(var(--pad)*-.6) clamp(20px,4vw,40px);pointer-events:none}
+.top-about{position:relative;overflow:hidden;padding:clamp(96px,12vw,150px) 0 clamp(60px,9vw,110px)}
+.top-about .field.bg{position:relative;margin:-9vw calc(var(--pad)*-.6) -5vw;pointer-events:none}
 .top-about .wrap{position:relative}
-@media(min-width:900px){.top-about .field.bg{margin-top:-11vw}}
+@media(min-width:900px){.top-about .field.bg{margin-top:-17vw;margin-bottom:-8vw}}
 .top-about .text{max-width:none;text-shadow:0 0 18px rgba(4,20,15,.9),0 0 4px rgba(4,20,15,.8)}
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
@@ -323,6 +323,7 @@ footer a.sg:hover{color:var(--white)}
 
   <section class="top-about" aria-labelledby="h1">
     <div class="wrap about">
+      <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".62" data-scale="1.3" data-n="3400" aria-hidden="true"><canvas></canvas></div>
       <div class="text">
         <p class="stat" style="margin:0 0 34px"><b><i data-count="50">50</i>+</b><span>hazırlanmış program</span></p>
         <span class="label">Biz kimiz</span>
@@ -334,7 +335,6 @@ footer a.sg:hover{color:var(--white)}
           <a class="ghost" href="/tr/biznes">Örneklere bakın</a>
         </div>
       </div>
-      <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".62" data-scale="1.3" data-n="3400" aria-hidden="true"><canvas></canvas></div>
       <ul class="svc rv" aria-label="Hizmetler"><li><h4>İşin dijitalleştirilmesi</h4><p>İşin nasıl yürüdüğüne bakıyoruz: kim ne yapıyor, rapor nasıl çıkıyor. Sonra hangi kısmın programla daha hızlı ve hatasız gittiğini birlikte seçiyoruz.</p></li><li><h4>Yazılım geliştirme</h4><p>Muhasebe, müşteri tabanı, sipariş ve rapor programları. Her biri sizin alanınızın kurallarına ve rollerine göre kurulur.</p></li><li><h4>Web uygulaması geliştirme</h4><p>Telefonda ve bilgisayarda tarayıcıdan açılır, indirmek gerekmez. Her çalışanın kendi girişi ve yetkisi olur, veri tek yerde saklanır.</p></li><li><h4>Yapay zekâ destekli çözümler</h4><p>Belge ve veriyi okuyup analiz eden, rapor ve metin hazırlayan çözümler. Yapay zekâ çalışanın yerini almaz, zaman alan kısmı üstlenir.</p></li></ul>
     </div>
   </section>
