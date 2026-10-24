@@ -88,6 +88,13 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .lang a:hover{background:rgba(255,255,255,.07);color:var(--white)}
 .lang a[aria-current="true"]{color:var(--saffron)}
 html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:clamp(40px,6.1vw,92px)}
+.top-about{position:relative;overflow:hidden;padding:clamp(120px,16vw,190px) 0 clamp(60px,9vw,110px)}
+.top-about .field.bg{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);opacity:.5;pointer-events:none}
+.top-about .wrap{position:relative}
+.top-about .text{max-width:none;text-shadow:0 0 18px rgba(4,20,15,.9),0 0 4px rgba(4,20,15,.8)}
+@media(max-width:700px){.top-about .field.bg{top:270px;transform:none;opacity:.55}}
+.top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
+.top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
 .about .text{max-width:760px}
 .about .text p{max-width:62ch}
 .stat{display:flex;align-items:baseline;gap:14px;margin-top:44px}
@@ -112,8 +119,8 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .hero{min-height:88svh;display:grid;align-items:center;padding:110px 0 60px}
 .hero.short{min-height:66svh;padding-top:96px;padding-bottom:40px}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,4vw,60px);align-items:center;width:100%}
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
-.hero h1 .w>span{display:inline-block;animation:rise 1.1s var(--ease) both;animation-delay:calc(var(--i)*80ms + 150ms)}
+.hero h1 .w,.hero h2.pitch .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.hero h1 .w>span,.hero h2.pitch .w>span{display:inline-block;animation:rise 1.1s var(--ease) both;animation-delay:calc(var(--i)*80ms + 150ms)}
 @keyframes rise{from{transform:translateY(108%)}to{transform:none}}
 .hero .label{animation:fade 1s var(--ease) both}
 .hero .lead,.hero .cta{animation:fade 1s var(--ease) .75s both}
@@ -442,12 +449,13 @@ footer a.sg:hover{color:var(--white)}
     return out;
   }
 
-  function aiPoints(n){
-    var c=document.createElement('canvas'); c.width=520; c.height=300;
+  function aiPoints(n, text){
+    text = text || 'AI';
+    var CW = text.length>3 ? 1000 : 520, c=document.createElement('canvas'); c.width=CW; c.height=300;
     var g=c.getContext('2d'); g.fillStyle='#000'; g.textAlign='center'; g.textBaseline='middle';
-    g.font='800 300px Inter,Arial,Helvetica,sans-serif'; g.fillText('AI',260,168);
-    var d=g.getImageData(0,0,520,300).data, px=[], x0=999, x1=0, y0=999, y1=0;
-    for (var y=0;y<300;y+=2) for (var x=0;x<520;x+=2) if (d[(y*520+x)*4+3]>128){ px.push([x,y]); if(x<x0)x0=x; if(x>x1)x1=x; if(y<y0)y0=y; if(y>y1)y1=y; }
+    g.font=(text.length>3?'800 230px':'800 300px')+' Inter,Arial,Helvetica,sans-serif'; g.fillText(text,CW/2,168);
+    var d=g.getImageData(0,0,CW,300).data, px=[], x0=9999, x1=0, y0=999, y1=0;
+    for (var y=0;y<300;y+=2) for (var x=0;x<CW;x+=2) if (d[(y*CW+x)*4+3]>128){ px.push([x,y]); if(x<x0)x0=x; if(x>x1)x1=x; if(y<y0)y0=y; if(y>y1)y1=y; }
     var bw=x1-x0, cy=(y0+y1)/2, out=[];
     for (var i=0;i<n;i++){ var p=px[Math.floor(Math.random()*px.length)]; out.push([(p[0]-x0)/bw+rnd(-.004,.004), .4+(p[1]-cy)/bw+rnd(-.004,.004)]); }
     return out;
@@ -556,7 +564,7 @@ footer a.sg:hover{color:var(--white)}
   document.querySelectorAll('[data-field]').forEach(function(box){
     if (getComputedStyle(box).display === 'none') return;
     var shape = box.dataset.field, n = parseInt(box.dataset.n || '1200', 10);
-    new Field(box, shape === 'brain' ? brainPoints : shape === 'ai' ? aiPoints : galaxyPoints, small ? Math.round(n*.5) : n,
+    new Field(box, shape === 'brain' ? brainPoints : shape === 'ai' ? function(k){ return aiPoints(k, box.dataset.text); } : galaxyPoints, small ? Math.round(n*.5) : n,
       {ratio: parseFloat(box.dataset.ratio || '.95'), spin: shape === 'galaxy', cycle: shape === 'ai', pulse: box.hasAttribute('data-pulse'), scale: parseFloat(box.dataset.scale || '1')});
   });
 
