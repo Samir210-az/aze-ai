@@ -90,10 +90,10 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .lang a[aria-current="true"]{color:var(--saffron)}
 html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:clamp(40px,6.1vw,92px)}
 .top-about{position:relative;overflow:hidden;padding:clamp(120px,16vw,190px) 0 clamp(60px,9vw,110px)}
-.top-about .field.bg{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);opacity:.5;pointer-events:none}
+.top-about .field.bg{position:relative;margin:clamp(10px,3vw,30px) calc(var(--pad)*-.6) clamp(20px,4vw,40px);pointer-events:none}
 .top-about .wrap{position:relative}
+@media(min-width:900px){.top-about .field.bg{margin-top:-11vw}}
 .top-about .text{max-width:none;text-shadow:0 0 18px rgba(4,20,15,.9),0 0 4px rgba(4,20,15,.8)}
-@media(max-width:700px){.top-about .field.bg{top:330px;transform:none;opacity:.55}}
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
 .about .text{max-width:760px}
@@ -322,7 +322,6 @@ footer a.sg:hover{color:var(--white)}
 <main id="esas">
 
   <section class="top-about" aria-labelledby="h1">
-    <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".55" data-scale="1.1" data-n="3200" aria-hidden="true"><canvas></canvas></div>
     <div class="wrap about">
       <div class="text">
         <p class="stat" style="margin:0 0 34px"><b><i data-count="50">50</i>+</b><span>готовых программ</span></p>
@@ -335,6 +334,7 @@ footer a.sg:hover{color:var(--white)}
           <a class="ghost" href="/ru/biznes">Смотреть примеры</a>
         </div>
       </div>
+      <div class="field bg" data-field="ai" data-text="AZE.AI" data-ratio=".62" data-scale="1.3" data-n="3400" aria-hidden="true"><canvas></canvas></div>
       <ul class="svc rv" aria-label="Услуги"><li><h4>Цифровизация бизнеса</h4><p>Смотрим, как идёт работа: кто что делает и как формируется отчёт. Затем вместе выбираем, какая часть быстрее и без ошибок пойдёт в программе.</p></li><li><h4>Программное обеспечение</h4><p>Учёт, база клиентов, заказы и отчёты. Каждая программа строится под правила и роли вашей сферы.</p></li><li><h4>Разработка веб-приложений</h4><p>Открываются в браузере на телефоне и компьютере, устанавливать ничего не нужно. У каждого сотрудника свой вход и свои права, данные хранятся в одном месте.</p></li><li><h4>Решения на основе ИИ</h4><p>Решения, которые читают и анализируют документы и данные, готовят отчёты и тексты. ИИ не заменяет сотрудника, он берёт на себя то, что отнимает время.</p></li></ul>
     </div>
   </section>

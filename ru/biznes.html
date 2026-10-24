@@ -90,10 +90,10 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .lang a[aria-current="true"]{color:var(--saffron)}
 html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:clamp(40px,6.1vw,92px)}
 .top-about{position:relative;overflow:hidden;padding:clamp(120px,16vw,190px) 0 clamp(60px,9vw,110px)}
-.top-about .field.bg{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);opacity:.5;pointer-events:none}
+.top-about .field.bg{position:relative;margin:clamp(10px,3vw,30px) calc(var(--pad)*-.6) clamp(20px,4vw,40px);pointer-events:none}
 .top-about .wrap{position:relative}
+@media(min-width:900px){.top-about .field.bg{margin-top:-11vw}}
 .top-about .text{max-width:none;text-shadow:0 0 18px rgba(4,20,15,.9),0 0 4px rgba(4,20,15,.8)}
-@media(max-width:700px){.top-about .field.bg{top:330px;transform:none;opacity:.55}}
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
 .about .text{max-width:760px}
