@@ -277,6 +277,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 footer{padding:40px 0 50px;color:var(--ash);font-size:14px;font-weight:400}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center}
 footer .fl{display:flex;gap:28px;flex-wrap:wrap}
+@media(max-width:560px){footer .fl{flex-wrap:nowrap;gap:clamp(8px,3.2vw,18px);width:100%;justify-content:space-between}footer .fl a{font-size:clamp(10px,3.1vw,13px);white-space:nowrap}}
 footer a.sg{color:var(--saffron)}
 footer a.sg:hover{color:var(--white)}
 
@@ -387,28 +388,6 @@ footer a.sg:hover{color:var(--white)}
   </section>
   <section aria-label="Видеопрезентации">
     <div class="wrap vids" id="vids" data-empty="Видео скоро появятся." data-err="Не удалось загрузить видео. Попробуйте позже." data-play="Воспроизвести видео"></div>
-  </section>
-
-  <section id="elaqe" class="cta-sec" aria-labelledby="h-cta">
-    <div class="wrap cta-grid rv">
-      <div>
-        <h2 id="h-cta">Сделаем такую программу и для вашего дела?</h2>
-        <p>Напишите, что вы хотите вести в программе.</p>
-      </div>
-      <form class="chat" data-chat data-thanks="Спасибо! Открывается WhatsApp, нажмите там кнопку отправки." action="https://wa.me/994552107111" method="get" target="_blank" aria-label="Переписка с Security Group">
-        <div class="chat-head"><img src="/mascot-logo.webp" width="32" height="32" alt=""><div><strong>Security Group</strong><span>Напишите ваше сообщение здесь</span></div></div>
-        <div class="chat-log" role="log" aria-live="polite">
-          <p class="msg in">Здравствуйте! Какую работу вы хотите вести в программе? Напишите коротко, а я отвечу.</p>
-        </div>
-        <div class="chat-quick"><button type="button" data-q="Здравствуйте, хочу получить информацию о программе для моего бизнеса.">Программа для бизнеса</button><button type="button" data-q="Здравствуйте, хочу получить информацию об инструментах для психологического центра.">Психологические инструменты</button><button type="button" data-q="Здравствуйте, хочу заказать программу под свои задачи.">У меня свой проект</button></div>
-        <div class="chat-box">
-          <label class="sr" for="chat-in">Ваше сообщение</label>
-          <textarea id="chat-in" name="text" rows="1" maxlength="600" placeholder="Напишите сообщение…" required></textarea>
-          <button class="chat-send" type="submit" aria-label="Отправить"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        </div>
-        <p class="chat-note">При отправке сообщение откроется в WhatsApp уже готовым.</p>
-      </form>
-    </div>
   </section>
 </main>
 

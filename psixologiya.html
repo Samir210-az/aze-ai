@@ -277,6 +277,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 footer{padding:40px 0 50px;color:var(--ash);font-size:14px;font-weight:400}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center}
 footer .fl{display:flex;gap:28px;flex-wrap:wrap}
+@media(max-width:560px){footer .fl{flex-wrap:nowrap;gap:clamp(8px,3.2vw,18px);width:100%;justify-content:space-between}footer .fl a{font-size:clamp(10px,3.1vw,13px);white-space:nowrap}}
 footer a.sg{color:var(--saffron)}
 footer a.sg:hover{color:var(--white)}
 
