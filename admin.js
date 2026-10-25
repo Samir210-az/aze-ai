@@ -3,6 +3,9 @@
   var DB = C.db.replace(/\/$/, ''), KEY = C.key;
   var YT = /^[A-Za-z0-9_-]{11}$/;
   var SKEY = 'aze_adm';
+  var LANGS = ['ru', 'en', 'tr'];
+  var LNAME = {ru:'Rus', en:'İngilis', tr:'Türk'};
+  var PAGE = (document.documentElement.lang || 'az').slice(0, 2);
 
   function el(tag, attrs, kids){
     var n = document.createElement(tag);
@@ -30,7 +33,13 @@
       var out = [];
       Object.keys(d || {}).forEach(function(k){
         var v = d[k];
-        if (v && YT.test(v.yt || '') && typeof v.title === 'string') out.push({k:k, yt:v.yt, title:v.title, desc:typeof v.desc === 'string' ? v.desc : '', order:Number(v.order) || 0});
+        if (v && YT.test(v.yt || '') && typeof v.title === 'string') {
+          var o = {k:k, yt:v.yt, title:v.title, desc:typeof v.desc === 'string' ? v.desc : '', order:Number(v.order) || 0, tr:{}};
+          LANGS.forEach(function(l){
+            o.tr[l] = {title:typeof v['title_' + l] === 'string' ? v['title_' + l] : '', desc:typeof v['desc_' + l] === 'string' ? v['desc_' + l] : ''};
+          });
+          out.push(o);
+        }
       });
       out.sort(function(a,b){ return a.order - b.order; });
       return out;
@@ -39,7 +48,14 @@
 
   var PLAY = '<svg width="26" height="26" viewBox="0 0 24 24" fill="#201400" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>';
 
+  function localized(v){
+    var t = v.tr && v.tr[PAGE];
+    if (!t) return v;
+    return {k:v.k, yt:v.yt, order:v.order, title:t.title || v.title, desc:t.title || t.desc ? t.desc : v.desc};
+  }
+
   function card(v, playLabel){
+    v = localized(v);
     var a = el('a', {'class':'vid-box', href:'https://www.youtube.com/watch?v=' + v.yt, target:'_blank', rel:'noopener noreferrer', 'aria-label':playLabel + ': ' + v.title}, [
       el('img', {src:'https://i.ytimg.com/vi/' + v.yt + '/hqdefault.jpg', alt:'', loading:'lazy', width:'480', height:'360'})
     ]);
@@ -136,11 +152,20 @@
     var title = el('input', {type:'text', id:'adm-t', maxlength:'120', required:'', autocomplete:'off'});
     var desc = el('textarea', {id:'adm-d', maxlength:'400', rows:'2'});
     var btn = el('button', {type:'submit', 'class':'pill', text:'Yadda saxla'});
+    var tr = {};
+    var more = el('details', {'class':'adm-tr'}, [el('summary', {text:'Digər dillər (istəyə görə)'})]);
+    LANGS.forEach(function(l){
+      tr[l] = {t:el('input', {type:'text', id:'adm-t-' + l, maxlength:'120', autocomplete:'off'}), d:el('textarea', {id:'adm-d-' + l, maxlength:'400', rows:'2'})};
+      more.appendChild(el('label', {'for':'adm-t-' + l, text:LNAME[l] + ' dilində ad'}));
+      more.appendChild(tr[l].t);
+      more.appendChild(el('label', {'for':'adm-d-' + l, text:LNAME[l] + ' dilində təsvir'}));
+      more.appendChild(tr[l].d);
+    });
     var f = el('form', {'class':'adm-form'}, [
       el('label', {'for':'adm-u', text:'YouTube linki'}), url,
-      el('label', {'for':'adm-t', text:'Ad'}), title,
+      el('label', {'for':'adm-t', text:'Ad (Azərbaycan dilində)'}), title,
       el('label', {'for':'adm-d', text:'Qısa təsvir (istəyə görə)'}), desc,
-      btn, msg
+      more, btn, msg
     ]);
     var current = [];
 
@@ -176,8 +201,15 @@
       if (!id){ msg.textContent = 'YouTube linki tanınmadı.'; return; }
       var min = current.length ? current[0].order : 0;
       btn.disabled = true;
-      api('POST', '/videos', {yt:id, title:title.value.trim(), desc:desc.value.trim(), order:min - 1}).then(function(){
-        url.value = title.value = desc.value = ''; msg.textContent = 'Yadda saxlanıldı.'; return refresh();
+      var body = {yt:id, title:title.value.trim(), desc:desc.value.trim(), order:min - 1};
+      LANGS.forEach(function(l){
+        var t = tr[l].t.value.trim(), d = tr[l].d.value.trim();
+        if (t) body['title_' + l] = t;
+        if (d) body['desc_' + l] = d;
+      });
+      api('POST', '/videos', body).then(function(){
+        url.value = title.value = desc.value = '';
+        LANGS.forEach(function(l){ tr[l].t.value = tr[l].d.value = ''; }); msg.textContent = 'Yadda saxlanıldı.'; return refresh();
       }).catch(fail).then(function(){ btn.disabled = false; });
     });
     var out = el('button', {type:'button', 'class':'adm-out', text:'Çıxış', onclick:function(){ try { sessionStorage.removeItem(SKEY); } catch(e){} close(); }});
