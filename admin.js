@@ -103,7 +103,7 @@
   }
   function api(method, path, body){
     return token().then(function(t){
-      return fetch(DB + path + '.json?auth=' + encodeURIComponent(t), {method:method, headers:{'Content-Type':'application/json'}, body:body ? JSON.stringify(body) : undefined});
+      return fetch(DB + path + '.json?auth=' + encodeURIComponent(t), {method:method, headers:{'Content-Type':'application/json'}, body:body !== undefined ? JSON.stringify(body) : undefined});
     }).then(function(r){ if (!r.ok) throw new Error(r.status === 401 || r.status === 403 ? 'perm' : 'db'); return r.json(); });
   }
 
@@ -165,9 +165,26 @@
       el('label', {'for':'adm-u', text:'YouTube linki'}), url,
       el('label', {'for':'adm-t', text:'Ad (Azərbaycan dilində)'}), title,
       el('label', {'for':'adm-d', text:'Qısa təsvir (istəyə görə)'}), desc,
-      more, btn, msg
+      more, btn, cancel, msg
     ]);
     var current = [];
+    var editKey = null;
+    var cancel = el('button', {type:'button', 'class':'adm-out', text:'Redaktəni ləğv et', hidden:'', onclick:function(){ resetForm(); }});
+
+    function resetForm(){
+      editKey = null;
+      url.value = title.value = desc.value = '';
+      LANGS.forEach(function(l){ tr[l].t.value = tr[l].d.value = ''; });
+      btn.textContent = 'Yadda saxla'; cancel.hidden = true; more.open = false; msg.textContent = '';
+    }
+    function startEdit(v){
+      editKey = v.k;
+      url.value = 'https://youtu.be/' + v.yt; title.value = v.title; desc.value = v.desc;
+      LANGS.forEach(function(l){ tr[l].t.value = v.tr[l].title; tr[l].d.value = v.tr[l].desc; });
+      more.open = LANGS.some(function(l){ return v.tr[l].title || v.tr[l].desc; });
+      btn.textContent = 'Yenilə'; cancel.hidden = false; msg.textContent = '';
+      dlg.scrollTop = 0; (dlg.firstChild || dlg).scrollTop = 0; url.focus();
+    }
 
     function fail(e){
       if (e.message === 'auth'){ login(); return; }
@@ -186,6 +203,7 @@
       current.forEach(function(v, i){
         list.appendChild(el('div', {'class':'adm-row'}, [
           el('span', {text:v.title}),
+          el('button', {type:'button', 'aria-label':'Redaktə et', text:'Redaktə', onclick:function(){ startEdit(v); }}),
           el('button', {type:'button', 'aria-label':'Yuxarı', text:'↑', onclick:function(){ move(i, -1); }}),
           el('button', {type:'button', 'aria-label':'Aşağı', text:'↓', onclick:function(){ move(i, 1); }}),
           el('button', {type:'button', 'aria-label':'Sil', text:'Sil', onclick:function(){
@@ -201,6 +219,17 @@
       if (!id){ msg.textContent = 'YouTube linki tanınmadı.'; return; }
       var min = current.length ? current[0].order : 0;
       btn.disabled = true;
+      if (editKey){
+        var upd = {yt:id, title:title.value.trim(), desc:desc.value.trim()};
+        LANGS.forEach(function(l){
+          upd['title_' + l] = tr[l].t.value.trim() || null;
+          upd['desc_' + l] = tr[l].d.value.trim() || null;
+        });
+        api('PATCH', '/videos/' + editKey, upd).then(function(){
+          resetForm(); msg.textContent = 'Yeniləndi.'; return refresh();
+        }).catch(fail).then(function(){ btn.disabled = false; });
+        return;
+      }
       var body = {yt:id, title:title.value.trim(), desc:desc.value.trim(), order:min - 1};
       LANGS.forEach(function(l){
         var t = tr[l].t.value.trim(), d = tr[l].d.value.trim();
