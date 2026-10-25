@@ -1,0 +1,4 @@
+Contact: https://wa.me/994552107111
+Expires: 2027-10-26T00:00:00.000Z
+Preferred-Languages: az, ru, en, tr
+Canonical: https://aze-ai.az/.well-known/security.txt
