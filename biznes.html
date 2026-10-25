@@ -30,11 +30,11 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://aze-ai.az/#org", "name": "Security Group", "alternateName": "AZE AI", "url": "https://aze-ai.az/", "logo": "https://aze-ai.az/favicon.svg", "description": "Biznes üçün idarəetmə proqramları, veb tətbiqlər, süni intellekt həlləri və psixoloji mərkəzlər üçün test və hesabat alətləri hazırlayan marka.", "sameAs": ["https://instagram.com/securtiy_group"]}, {"@type": "WebSite", "@id": "https://aze-ai.az/#site", "url": "https://aze-ai.az/", "name": "AZE AI", "inLanguage": ["az", "ru", "en", "tr"], "publisher": {"@id": "https://aze-ai.az/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana səhifə", "item": "https://aze-ai.az/"}, {"@type": "ListItem", "position": 2, "name": "Biznes proqramları", "item": "https://aze-ai.az/biznes"}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
-  --void:#04140f; --white:#fff; --ash:#b9c1bd; --silver:#dbe1de;
+  --void:#04140f; --white:#fff; --ash:#f1f5f3; --silver:#ffffff;
   --iris:#8052ff; --saffron:#ffb829; --verdant:#15846e;
   --teal:#2fc5aa; --magenta:#e45bd3; --blue:#4d8dff;
   --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -43,7 +43,10 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;color-scheme:dark;overflow-x:clip;background:var(--void)}
-body{background:var(--void);color:var(--white);font-family:var(--font);font-weight:300;font-size:18px;line-height:1.5;font-feature-settings:"ss01" 1;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{background:var(--void);color:var(--white);font-family:var(--font);font-weight:400;font-size:18px;line-height:1.5;font-feature-settings:"ss01" 1;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2{font-weight:300}
+.sgn{color:var(--saffron)!important;text-transform:uppercase;font-size:inherit!important}
+.pill .sgn,.ghost .sgn{color:inherit!important}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 :focus-visible{outline:2px solid var(--saffron);outline-offset:4px;border-radius:6px}
@@ -225,7 +228,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .spy-art .tri{--tc:currentColor}
 .spy-count{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--saffron);text-transform:uppercase}
 .spy-count b{font-weight:600;color:var(--white)}
-.tool{display:grid;grid-template-columns:34px 40px 1fr;gap:16px;padding-block:clamp(40px,9vh,90px);align-items:start;opacity:.38;transition:opacity .5s var(--ease)}
+.tool{display:grid;grid-template-columns:34px 40px 1fr;gap:16px;padding-block:clamp(40px,9vh,90px);align-items:start;opacity:.55;transition:opacity .5s var(--ease)}
 .tool.cur{opacity:1}
 .tool .n{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--saffron);padding-top:9px}
 .tool .mk{width:34px;height:34px;color:var(--c);fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-top:2px;stroke-dasharray:700;stroke-dashoffset:700;transition:stroke-dashoffset 1.8s var(--ease)}
@@ -269,7 +272,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .chat-box{display:flex;align-items:flex-end;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:8px 8px 8px 14px}
 .chat-box:focus-within{border-color:var(--iris)}
 .chat-box textarea{flex:1;font:inherit;font-size:15px;color:#fff;background:none;border:0;outline:0;resize:none;max-height:120px;padding:8px 0}
-.chat-box textarea::placeholder{color:var(--ash)}
+.chat-box textarea::placeholder{color:#cfd8d4}
 .chat-send{flex:none;width:40px;height:40px;border-radius:12px;border:0;background:var(--iris);color:#fff;display:grid;place-items:center;cursor:pointer;transition:transform .2s}
 .chat-send:hover{transform:translateY(-1px)}
 .chat-note{margin:10px 2px 0!important;font-size:12px!important;color:var(--ash)}
@@ -285,8 +288,8 @@ footer a.sg:hover{color:var(--white)}
 .rv{transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .js .rv{opacity:0;transform:translateY(28px)}
 .js .rv.in{opacity:1;transform:none}
-.js .tool.rv{opacity:.38}
-.js .tool.rv.in{opacity:.38;transform:none}
+.js .tool.rv{opacity:.55}
+.js .tool.rv.in{opacity:.55;transform:none}
 .js .tool.rv.in.cur{opacity:1}
 
 @media (max-width:900px){
@@ -381,7 +384,7 @@ footer a.sg:hover{color:var(--white)}
   <section class="hero short" aria-labelledby="h1">
     <div class="wrap">
       <div>
-        <span class="label">Security Group · Biznes</span>
+        <span class="label"><span class="sgn" lang="en">Security Group</span> · Biznes</span>
         <h1 id="h1"><span class="w" style="--i:0"><span>Biznes</span></span> <span class="w" style="--i:1"><span><em>proqramları.</em></span></span></h1>
         <p class="lead">Hər proqram ayrıca sahə üçündür, öz hesabları və öz məlumat bazası ilə işləyir. Hər birinin nə iş gördüyü aşağıda yazılıb.</p>
       </div>
@@ -426,7 +429,7 @@ footer a.sg:hover{color:var(--white)}
         <p>Yazın, hansı işi proqramla aparmaq istəyirsiniz.</p>
       </div>
       <form class="chat" data-chat data-thanks="Təşəkkürlər! WhatsApp açılır, orada göndər düyməsini basın." action="https://wa.me/994552107111" method="get" target="_blank" aria-label="Security Group ilə yazışma">
-        <div class="chat-head"><img src="/mascot-logo.webp" width="32" height="32" alt=""><div><strong>Security Group</strong><span>Mesajınızı bura yazın</span></div></div>
+        <div class="chat-head"><img src="/mascot-logo.webp" width="32" height="32" alt=""><div><strong><span class="sgn" lang="en">Security Group</span></strong><span>Mesajınızı bura yazın</span></div></div>
         <div class="chat-log" role="log" aria-live="polite">
           <p class="msg in">Salam! Hansı işi proqramla aparmaq istəyirsiniz? Qısa yazın, mən də sizə cavab verim.</p>
         </div>
@@ -444,7 +447,7 @@ footer a.sg:hover{color:var(--white)}
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Security Group · AZE AI</span>
+    <span>© 2026 <span class="sgn" lang="en">Security Group</span> · AZE AI</span>
     <nav class="fl" aria-label="Alt menyu"><a class="ghost" href="/biznes">Biznes</a><a class="ghost" href="/psixologiya">Psixoloji</a><a class="ghost" href="/teqdimat">Təqdimat</a><a class="ghost" href="/#elaqe">Əlaqə</a></nav>
     <a class="sg" href="https://instagram.com/securtiy_group" target="_blank" rel="noopener noreferrer">By securtiy_group</a>
   </div>
