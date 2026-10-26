@@ -124,10 +124,15 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
 .about .text{max-width:760px}
 .about-grid{display:grid;gap:clamp(24px,4vw,36px)}
-.shot{margin:0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px -30px rgba(0,0,0,.75);background:#06160f}
-.shot img{display:block;width:100%;height:auto}
-.shot.wide{max-width:960px;margin:clamp(32px,5vw,56px) auto 0}
-.shot.wide img{aspect-ratio:16/9;object-fit:cover;object-position:50% 42%}
+.pic{position:relative;margin:0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px -30px rgba(0,0,0,.75);background:#06160f}
+.pic img{display:block;width:100%;height:auto}
+.pic::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(4,20,15,.82),rgba(4,20,15,0) 46%);pointer-events:none}
+.pic figcaption{position:absolute;left:clamp(16px,2.4vw,26px);bottom:clamp(14px,2vw,22px);z-index:1;display:flex;align-items:center;gap:12px;color:var(--saffron);font-size:clamp(12px,1.2vw,14px);font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.pic figcaption::before{content:"";width:28px;height:1px;background:var(--saffron)}
+.pic.wide{max-width:960px;margin:clamp(32px,5vw,56px) auto 0}
+.pic.wide img{aspect-ratio:16/9;object-fit:cover;object-position:50% 42%}
+@media(min-width:700px) and (max-width:1359px){.about-grid .pic img{aspect-ratio:21/9;object-fit:cover;object-position:78% 62%}}
+@media(min-width:700px) and (max-width:900px){.hero .pic img{aspect-ratio:21/9;object-fit:cover;object-position:78% 50%}}
 @media(min-width:1360px){.about-grid{grid-template-columns:minmax(0,1fr) 440px;align-items:center;gap:40px}}
 .about .text p{max-width:62ch}
 .stat{display:flex;align-items:baseline;gap:14px;margin-top:44px}
@@ -398,6 +403,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
 .fab img{width:62px;height:62px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:2px solid var(--saffron);background:#0b2a22;box-shadow:0 8px 26px rgba(0,0,0,.5),0 0 0 6px rgba(255,184,41,.14);transition:transform .25s}
 .fab span{background:var(--saffron);color:#201400;font-size:13px;font-weight:700;letter-spacing:.04em;padding:9px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.4)}
 .fab:hover img,.fab:focus-visible img{transform:scale(1.06)}
+@media(min-width:901px){.fab{right:28px;bottom:28px;gap:14px}.fab img{width:88px;height:88px;border-width:3px}.fab span{font-size:17px;padding:13px 22px}}
 @media(max-width:620px){
   .statrow{flex-wrap:nowrap;justify-content:space-between;gap:12px}
   .statrow .stat{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
@@ -479,7 +485,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
         <h1 id="h1"><span class="w" style="--i:0"><span>Biznes</span></span> <span class="w" style="--i:1"><span><em>proqramları.</em></span></span></h1>
         <p class="lead">Hər proqram ayrıca sahə üçündür, öz hesabları və öz məlumat bazası ilə işləyir. Hər birinin nə iş gördüyü aşağıda yazılıb.</p>
       </div>
-      <figure class="shot"><img src="/img/biznes-1200.webp" srcset="/img/biznes-640.webp 640w, /img/biznes-1200.webp 1200w" sizes="(min-width:900px) 46vw, 92vw" width="1200" height="800" alt="Bir-birinə bağlı şüşə kartlar, böyüyən sütun qrafiki, söhbət işarəsi və təqvim" fetchpriority="high" decoding="async"></figure>
+      <figure class="pic"><img src="/img/biznes-1200.webp" srcset="/img/biznes-640.webp 640w, /img/biznes-1200.webp 1200w" sizes="(min-width:900px) 46vw, 92vw" width="1200" height="800" alt="Bir-birinə bağlı şüşə kartlar, böyüyən sütun qrafiki, söhbət işarəsi və təqvim" fetchpriority="high" decoding="async"><figcaption>Biznes proqramları</figcaption></figure>
     </div>
   </section>
   <section aria-label="Biznes proqramları">
