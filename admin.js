@@ -34,7 +34,7 @@
       Object.keys(d || {}).forEach(function(k){
         var v = d[k];
         if (v && YT.test(v.yt || '') && typeof v.title === 'string') {
-          var o = {k:k, yt:v.yt, title:v.title, desc:typeof v.desc === 'string' ? v.desc : '', order:Number(v.order) || 0, tr:{}};
+          var o = {k:k, yt:v.yt, title:v.title, desc:typeof v.desc === 'string' ? v.desc : '', order:Number(v.order) || 0, cat:v.cat === 'biz' || v.cat === 'psy' ? v.cat : '', tr:{}};
           LANGS.forEach(function(l){
             o.tr[l] = {title:typeof v['title_' + l] === 'string' ? v['title_' + l] : '', desc:typeof v['desc_' + l] === 'string' ? v['desc_' + l] : ''};
           });
@@ -97,12 +97,23 @@
     document.head.appendChild(sc);
   }
 
+  var FILTER = 'all';
   function renderPublic(){
     var box = document.getElementById('vids'); if (!box) return;
     fetchVideos().then(function(list){
+      var bar = document.getElementById('vid-filter');
+      if (bar) bar.remove();
+      if (list.some(function(v){ return v.cat; })){
+        bar = el('div', {'class':'wrap vf', id:'vid-filter', role:'group'});
+        [['all', box.dataset.fAll], ['biz', box.dataset.fBiz], ['psy', box.dataset.fPsy]].forEach(function(f){
+          bar.appendChild(el('button', {type:'button', 'aria-pressed':String(FILTER === f[0]), text:f[1], onclick:function(){ FILTER = f[0]; renderPublic(); }}));
+        });
+        box.parentNode.insertBefore(bar, box);
+      } else FILTER = 'all';
+      var shown = list.filter(function(v){ return FILTER === 'all' || v.cat === FILTER; });
       box.textContent = '';
-      if (!list.length){ box.appendChild(el('p', {'class':'vids-note', text:box.dataset.empty})); return; }
-      list.forEach(function(v){ box.appendChild(card(v, box.dataset.play)); });
+      if (!shown.length){ box.appendChild(el('p', {'class':'vids-note', text:box.dataset.empty})); return; }
+      shown.forEach(function(v){ box.appendChild(card(v, box.dataset.play)); });
       videoSchema(list);
     }).catch(function(){
       box.textContent = '';
@@ -179,7 +190,11 @@
     var url = el('input', {type:'text', id:'adm-u', placeholder:'https://youtu.be/...', required:'', autocomplete:'off'});
     var title = el('input', {type:'text', id:'adm-t', maxlength:'120', required:'', autocomplete:'off'});
     var desc = el('textarea', {id:'adm-d', maxlength:'400', rows:'2'});
+    var cat = el('select', {id:'adm-c', required:''}, [
+      el('option', {value:'', text:'— seçin —'}), el('option', {value:'biz', text:'Biznes'}), el('option', {value:'psy', text:'Psixoloji'})
+    ]);
     var btn = el('button', {type:'submit', 'class':'pill', text:'Yadda saxla'});
+    var cancel = el('button', {type:'button', 'class':'adm-out', text:'Redaktəni ləğv et', hidden:'', onclick:function(){ resetForm(); }});
     var tr = {};
     var more = el('details', {'class':'adm-tr'}, [el('summary', {text:'Digər dillər (istəyə görə)'})]);
     LANGS.forEach(function(l){
@@ -191,23 +206,23 @@
     });
     var f = el('form', {'class':'adm-form'}, [
       el('label', {'for':'adm-u', text:'YouTube linki'}), url,
+      el('label', {'for':'adm-c', text:'Bölmə'}), cat,
       el('label', {'for':'adm-t', text:'Ad (Azərbaycan dilində)'}), title,
       el('label', {'for':'adm-d', text:'Qısa təsvir (istəyə görə)'}), desc,
       more, btn, cancel, msg
     ]);
     var current = [];
     var editKey = null;
-    var cancel = el('button', {type:'button', 'class':'adm-out', text:'Redaktəni ləğv et', hidden:'', onclick:function(){ resetForm(); }});
 
     function resetForm(){
       editKey = null;
-      url.value = title.value = desc.value = '';
+      url.value = title.value = desc.value = cat.value = '';
       LANGS.forEach(function(l){ tr[l].t.value = tr[l].d.value = ''; });
       btn.textContent = 'Yadda saxla'; cancel.hidden = true; more.open = false; msg.textContent = '';
     }
     function startEdit(v){
       editKey = v.k;
-      url.value = 'https://youtu.be/' + v.yt; title.value = v.title; desc.value = v.desc;
+      url.value = 'https://youtu.be/' + v.yt; cat.value = v.cat; title.value = v.title; desc.value = v.desc;
       LANGS.forEach(function(l){ tr[l].t.value = v.tr[l].title; tr[l].d.value = v.tr[l].desc; });
       more.open = LANGS.some(function(l){ return v.tr[l].title || v.tr[l].desc; });
       btn.textContent = 'Yenilə'; cancel.hidden = false; msg.textContent = '';
@@ -230,7 +245,7 @@
       if (!current.length){ list.appendChild(el('p', {'class':'adm-note', text:'Hələ video yoxdur.'})); return; }
       current.forEach(function(v, i){
         list.appendChild(el('div', {'class':'adm-row'}, [
-          el('span', {text:v.title}),
+          el('span', {text:(v.cat === 'biz' ? '[Biznes] ' : v.cat === 'psy' ? '[Psixoloji] ' : '[bölmə yoxdur] ') + v.title}),
           el('button', {type:'button', 'aria-label':'Redaktə et', text:'Redaktə', onclick:function(){ startEdit(v); }}),
           el('button', {type:'button', 'aria-label':'Yuxarı', text:'↑', onclick:function(){ move(i, -1); }}),
           el('button', {type:'button', 'aria-label':'Aşağı', text:'↓', onclick:function(){ move(i, 1); }}),
@@ -248,7 +263,7 @@
       var min = current.length ? current[0].order : 0;
       btn.disabled = true;
       if (editKey){
-        var upd = {yt:id, title:title.value.trim(), desc:desc.value.trim()};
+        var upd = {yt:id, cat:cat.value, title:title.value.trim(), desc:desc.value.trim()};
         LANGS.forEach(function(l){
           upd['title_' + l] = tr[l].t.value.trim() || null;
           upd['desc_' + l] = tr[l].d.value.trim() || null;
@@ -258,14 +273,14 @@
         }).catch(fail).then(function(){ btn.disabled = false; });
         return;
       }
-      var body = {yt:id, title:title.value.trim(), desc:desc.value.trim(), order:min - 1};
+      var body = {yt:id, cat:cat.value, title:title.value.trim(), desc:desc.value.trim(), order:min - 1};
       LANGS.forEach(function(l){
         var t = tr[l].t.value.trim(), d = tr[l].d.value.trim();
         if (t) body['title_' + l] = t;
         if (d) body['desc_' + l] = d;
       });
       api('POST', '/videos', body).then(function(){
-        url.value = title.value = desc.value = '';
+        url.value = title.value = desc.value = cat.value = '';
         LANGS.forEach(function(l){ tr[l].t.value = tr[l].d.value = ''; }); msg.textContent = 'Yadda saxlanıldı.'; return refresh();
       }).catch(fail).then(function(){ btn.disabled = false; });
     });

@@ -149,6 +149,9 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 @media(max-width:700px){.pains{grid-template-columns:1fr}}
 @media(max-width:560px){.gains{grid-template-columns:1fr}}
 .vids{--g:clamp(22px,3vw,36px);display:flex;flex-wrap:wrap;justify-content:center;gap:var(--g);padding-block:clamp(10px,3vw,30px) clamp(40px,7vw,90px)}
+.vf{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding-top:clamp(10px,3vw,30px)}
+.vf button{font:inherit;font-size:14px;font-weight:600;letter-spacing:.025em;text-transform:uppercase;color:var(--saffron);background:transparent;border:1px solid rgba(255,184,41,.55);border-radius:999px;padding:9px 20px;min-height:40px;cursor:pointer;transition:background .25s,color .25s}
+.vf button[aria-pressed="true"]{background:var(--saffron);color:#201400;border-color:var(--saffron)}
 .vid{display:block;flex:0 1 min(280px,calc((100% - 2*var(--g))/3))}
 .vid-box{position:relative;display:block;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#071611;border:1px solid rgba(255,255,255,.12)}
 .vid-box img,.vid-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
@@ -176,6 +179,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .adm h3{font-size:18px;margin:22px 0 10px;letter-spacing:-.01em}
 .adm-form{display:grid;gap:8px}
 .adm-form label{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--saffron);margin-top:6px}
+.adm-form select{font:inherit;font-size:16px;color:var(--white);background:#10201a;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:12px 14px;width:100%}
 .adm-form input,.adm-form textarea{font:inherit;font-size:16px;color:var(--white);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:12px 14px;width:100%;resize:vertical}
 .adm-form input:focus,.adm-form textarea:focus{outline:2px solid var(--saffron);outline-offset:1px}
 .adm-tr{display:grid;gap:8px;margin-top:8px}.adm-tr summary{cursor:pointer;color:var(--white);font-size:14px;padding:6px 0}
@@ -490,7 +494,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
     </div>
   </section>
   <section aria-label="Portfolio videoları">
-    <div class="wrap vids" id="vids" data-empty="Videolar tezliklə əlavə olunacaq." data-err="Videolar yüklənmədi. Bir az sonra yenidən cəhd edin." data-play="Videonu oxut"></div>
+    <div class="wrap vids" id="vids" data-empty="Videolar tezliklə əlavə olunacaq." data-err="Videolar yüklənmədi. Bir az sonra yenidən cəhd edin." data-play="Videonu oxut" data-f-all="Hamısı" data-f-biz="Biznes" data-f-psy="Psixoloji"></div>
   </section>
 </main>
 
