@@ -270,7 +270,7 @@
       }).catch(fail).then(function(){ btn.disabled = false; });
     });
     var out = el('button', {type:'button', 'class':'adm-out', text:'Çıxış', onclick:function(){ try { sessionStorage.removeItem(SKEY); } catch(e){} close(); }});
-    shell('Təqdimat videoları', [f, el('h3', {text:'Siyahı'}), list, out]);
+    shell('Portfolio videoları', [f, el('h3', {text:'Siyahı'}), list, out]);
     url.focus();
     refresh();
   }

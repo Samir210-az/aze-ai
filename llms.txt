@@ -6,7 +6,7 @@
 - [Ana səhifə](https://aze-ai.az/): şirkət və xidmətlər haqqında
 - [Biznes proqramları](https://aze-ai.az/biznes): klinika, əmlak, repetitor, ERP və digər CRM sistemləri
 - [Psixoloji alətlər](https://aze-ai.az/psixologiya): psixoloji mərkəzlər üçün test, qiymətləndirmə və hesabat alətləri
-- [Təqdimat videoları](https://aze-ai.az/teqdimat): proqramların necə işlədiyini göstərən videolar
+- [Portfolio videoları](https://aze-ai.az/teqdimat): proqramların necə işlədiyini göstərən videolar
 
 ## Dillər
 - Azərbaycan: https://aze-ai.az/
