@@ -76,14 +76,20 @@
     })
       .then(function (res) {
         if (res.status === 429) throw new Error("rate");
-        if (!res.ok) throw new Error("srv");
+        if (!res.ok) {
+          return res.json().catch(function () { return {}; }).then(function (b) {
+            var e = new Error("srv");
+            e.info = [res.status, b.error, b.detail].filter(Boolean).join(" ");
+            throw e;
+          });
+        }
         return res.json();
       })
       .then(function (data) {
         show(data.joke, data.prompt);
       })
       .catch(function (err) {
-        say(err.message === "rate" ? d.eRate : err.message === "srv" ? d.eSrv : d.eNet);
+        say(err.message === "rate" ? d.eRate : err.message === "srv" ? d.eSrv + (err.info ? " (" + err.info + ")" : "") : d.eNet);
       })
       .then(function () {
         goBtn.disabled = false;

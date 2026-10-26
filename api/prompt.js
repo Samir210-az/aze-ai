@@ -139,14 +139,17 @@ module.exports = async function handler(req, res) {
   if (!providers.length) return res.status(503).json({ error: "config" });
 
   const system = systemPrompt(target, tone, langName);
+  const fails = [];
   for (const provider of providers) {
     try {
       const text = await askModel(provider, system, idea);
       const out = parseReply(text) || (text.trim() ? { joke: "", prompt: text.trim() } : null);
       if (out) return res.status(200).json(out);
     } catch (err) {
-      console.error("prompt provider failed:", err && err.message);
+      const why = err && err.name === "AbortError" ? `${provider.name} timeout` : (err && err.message) || provider.name;
+      console.error("prompt provider failed:", why);
+      fails.push(why);
     }
   }
-  return res.status(502).json({ error: "upstream" });
+  return res.status(502).json({ error: "upstream", detail: fails.join("; ") });
 };
