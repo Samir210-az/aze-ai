@@ -115,6 +115,7 @@ header.nav.scrolled{background:rgba(4,20,15,.92)}
 .lang a:hover{background:rgba(255,255,255,.07);color:var(--white)}
 .lang a[aria-current="true"]{color:var(--saffron)}
 html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:clamp(40px,6.1vw,92px)}
+@media(max-width:540px){html[lang=ru] .hero h1{font-size:clamp(30px,9.6vw,44px)}}
 .top-about{position:relative;overflow:hidden;padding:clamp(64px,6vw,84px) 0 clamp(60px,9vw,110px)}
 .top-about .field.bg{position:relative;width:100vw;left:50%;margin:-34px 0 0 -50vw;pointer-events:none}
 @media(min-width:900px){.top-about .field.bg{margin-top:-64px}}
@@ -348,7 +349,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
 
 @media (max-width:900px){
   .nav-links{gap:20px}
-  .hero .wrap,.split,.sec-head,.feat,.spy{grid-template-columns:1fr}
+  .hero .wrap,.split,.sec-head,.feat,.spy{grid-template-columns:minmax(0,1fr)}
   .hero-art{max-width:520px;margin-inline:auto}
   .feat.rev .art,.feat.rev .shot{order:0}
   .shot{max-width:100%}
