@@ -75,6 +75,21 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/googlee9c7aafff11a9b08",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/googlee9c7aafff11a9b08.html",
+      "destination": "/googlee9c7aafff11a9b08"
     }
   ]
 }
