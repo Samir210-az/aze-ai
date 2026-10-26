@@ -123,6 +123,12 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
 .about .text{max-width:760px}
+.about-grid{display:grid;gap:clamp(24px,4vw,36px)}
+.shot{margin:0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px -30px rgba(0,0,0,.75);background:#06160f}
+.shot img{display:block;width:100%;height:auto}
+.shot.wide{max-width:960px;margin:clamp(32px,5vw,56px) auto 0}
+.shot.wide img{aspect-ratio:16/9;object-fit:cover;object-position:50% 42%}
+@media(min-width:1360px){.about-grid{grid-template-columns:minmax(0,1fr) 440px;align-items:center;gap:40px}}
 .about .text p{max-width:62ch}
 .stat{display:flex;align-items:baseline;gap:14px;margin-top:44px}
 .stat b{font-weight:400;font-size:clamp(56px,8vw,96px);line-height:.9;letter-spacing:-.06em}

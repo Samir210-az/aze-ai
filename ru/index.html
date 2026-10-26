@@ -123,6 +123,12 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
 .about .text{max-width:760px}
+.about-grid{display:grid;gap:clamp(24px,4vw,36px)}
+.shot{margin:0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px -30px rgba(0,0,0,.75);background:#06160f}
+.shot img{display:block;width:100%;height:auto}
+.shot.wide{max-width:960px;margin:clamp(32px,5vw,56px) auto 0}
+.shot.wide img{aspect-ratio:16/9;object-fit:cover;object-position:50% 42%}
+@media(min-width:1360px){.about-grid{grid-template-columns:minmax(0,1fr) 440px;align-items:center;gap:40px}}
 .about .text p{max-width:62ch}
 .stat{display:flex;align-items:baseline;gap:14px;margin-top:44px}
 .stat b{font-weight:400;font-size:clamp(56px,8vw,96px);line-height:.9;letter-spacing:-.06em}
@@ -468,6 +474,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="top-about" aria-labelledby="h1">
     <div class="wrap about">
       <div class="field bg" data-field="ai" data-text="AZE.AI" data-word="560" data-frac=".66" data-scale="1.05" data-n="3000" aria-hidden="true"><canvas></canvas></div>
+      <div class="about-grid">
       <div class="text">
         <div class="statrow"><p class="stat" style="margin:0"><b><i data-count="50">50</i>+</b><span>готовых программ</span></p><a class="mchip" href="/ru/promt"><img src="/mascot-chip.webp" width="144" height="128" alt="" loading="lazy" decoding="async"><span>AZE AI</span></a></div>
         <span class="label">Кто мы</span>
@@ -478,6 +485,8 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
           <a class="pill" href="#elaqe">Написать нам</a>
           <a class="ghost" href="/ru/biznes">Смотреть примеры</a>
         </div>
+      </div>
+      <figure class="shot"><img src="/img/home-hero-1200.webp" srcset="/img/home-hero-640.webp 640w, /img/home-hero-1200.webp 1200w" sizes="(min-width:1360px) 440px, 92vw" width="1200" height="800" alt="Стеклянное окно чата на фоне нейросети и маленький робот-талисман" loading="lazy" decoding="async"></figure>
       </div>
       <ul class="svc rv" aria-label="Услуги"><li><h4>Цифровизация бизнеса</h4><p>Смотрим, как идёт работа: кто что делает и как формируется отчёт. Затем вместе выбираем, какая часть быстрее и без ошибок пойдёт в программе.</p></li><li><h4>Программное обеспечение</h4><p>Учёт, база клиентов, заказы и отчёты. Каждая программа строится под правила и роли вашей сферы.</p></li><li><h4>Разработка веб-приложений</h4><p>Открываются в браузере на телефоне и компьютере, устанавливать ничего не нужно. У каждого сотрудника свой вход и свои права, данные хранятся в одном месте.</p></li><li><h4>Решения на основе ИИ</h4><p>Решения, которые читают и анализируют документы и данные, готовят отчёты и тексты. ИИ не заменяет сотрудника, он берёт на себя то, что отнимает время.</p></li></ul>
     </div>
@@ -495,6 +504,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
     <div class="wrap">
       <div class="rv"><span class="label">Что вы получаете</span><h2 id="h-gain">Что меняется в итоге.</h2></div>
       <ul class="gains rv"><li><h4>Время</h4><p>Повторяющаяся ручная работа и бумажные процессы переходят в программу.</p></li><li><h4>Контроль</h4><p>Ход работы, остатки и долги видны в одном месте.</p></li><li><h4>Откуда угодно</h4><p>Открывается в браузере на телефоне и компьютере, у каждого сотрудника свой вход.</p></li><li><h4>Умный помощник</h4><p>Где нужно, искусственный интеллект читает документ, готовит отчёт и текст.</p></li></ul>
+      <figure class="shot wide rv"><img src="/img/home-biz-1200.webp" srcset="/img/home-biz-640.webp 640w, /img/home-biz-1200.webp 1200w" sizes="(min-width:1000px) 960px, 92vw" width="1200" height="800" alt="Ноутбук с аналитической панелью на тёмном столе, рядом блокнот и чашка кофе" loading="lazy" decoding="async"></figure>
     </div>
   </section>
 

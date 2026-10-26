@@ -123,6 +123,12 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .top-about h1{font-size:clamp(38px,5.8vw,82px);max-width:16ch;margin-bottom:26px}
 .top-about .text p{max-width:56ch;font-size:clamp(17px,1.6vw,20px)}
 .about .text{max-width:760px}
+.about-grid{display:grid;gap:clamp(24px,4vw,36px)}
+.shot{margin:0;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px -30px rgba(0,0,0,.75);background:#06160f}
+.shot img{display:block;width:100%;height:auto}
+.shot.wide{max-width:960px;margin:clamp(32px,5vw,56px) auto 0}
+.shot.wide img{aspect-ratio:16/9;object-fit:cover;object-position:50% 42%}
+@media(min-width:1360px){.about-grid{grid-template-columns:minmax(0,1fr) 440px;align-items:center;gap:40px}}
 .about .text p{max-width:62ch}
 .stat{display:flex;align-items:baseline;gap:14px;margin-top:44px}
 .stat b{font-weight:400;font-size:clamp(56px,8vw,96px);line-height:.9;letter-spacing:-.06em}
@@ -468,6 +474,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="top-about" aria-labelledby="h1">
     <div class="wrap about">
       <div class="field bg" data-field="ai" data-text="AZE.AI" data-word="560" data-frac=".66" data-scale="1.05" data-n="3000" aria-hidden="true"><canvas></canvas></div>
+      <div class="about-grid">
       <div class="text">
         <div class="statrow"><p class="stat" style="margin:0"><b><i data-count="50">50</i>+</b><span>programs built</span></p><a class="mchip" href="/en/promt"><img src="/mascot-chip.webp" width="144" height="128" alt="" loading="lazy" decoding="async"><span>AZE AI</span></a></div>
         <span class="label">Who we are</span>
@@ -478,6 +485,8 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
           <a class="pill" href="#elaqe">Write to us</a>
           <a class="ghost" href="/en/biznes">See examples</a>
         </div>
+      </div>
+      <figure class="shot"><img src="/img/home-hero-1200.webp" srcset="/img/home-hero-640.webp 640w, /img/home-hero-1200.webp 1200w" sizes="(min-width:1360px) 440px, 92vw" width="1200" height="800" alt="Glass chat window in front of a neural network, with a small robot mascot" loading="lazy" decoding="async"></figure>
       </div>
       <ul class="svc rv" aria-label="Services"><li><h4>Business digitisation</h4><p>We look at how the work runs: who does what and how the report is produced. Then we choose together which part goes faster and with fewer errors in software.</p></li><li><h4>Software development</h4><p>Accounting, customer base, orders and reports. Each program is built around the rules and roles of your field.</p></li><li><h4>Web application development</h4><p>Opens in a browser on phone and computer, nothing to install. Every employee has their own sign-in and permissions, and data is kept in one place.</p></li><li><h4>AI-powered solutions</h4><p>Solutions that read and analyse documents and data and prepare reports and texts. AI does not replace staff, it takes over the part that consumes time.</p></li></ul>
     </div>
@@ -495,6 +504,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
     <div class="wrap">
       <div class="rv"><span class="label">What you gain</span><h2 id="h-gain">What changes.</h2></div>
       <ul class="gains rv"><li><h4>Time</h4><p>Repetitive manual work and paper processes move into the program.</p></li><li><h4>Control</h4><p>The progress of work, stock and debts are visible in one place.</p></li><li><h4>From anywhere</h4><p>Opens in a browser on phone and computer, and every employee has their own sign-in.</p></li><li><h4>Smart assistant</h4><p>Where needed, AI reads the document and prepares the report and text.</p></li></ul>
+      <figure class="shot wide rv"><img src="/img/home-biz-1200.webp" srcset="/img/home-biz-640.webp 640w, /img/home-biz-1200.webp 1200w" sizes="(min-width:1000px) 960px, 92vw" width="1200" height="800" alt="Laptop showing an analytics dashboard on a dark desk, with a notebook and a cup of coffee" loading="lazy" decoding="async"></figure>
     </div>
   </section>
 
