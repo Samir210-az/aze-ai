@@ -95,6 +95,10 @@
   "functions": {
     "api/prompt.js": {
       "maxDuration": 30
+    },
+    "api/chat.js": {
+      "maxDuration": 30,
+      "includeFiles": "api/_kb.json"
     }
   }
 }
