@@ -305,6 +305,12 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .chat-send{flex:none;width:40px;height:40px;border-radius:12px;border:0;background:var(--iris);color:#fff;display:grid;place-items:center;cursor:pointer;transition:transform .2s}
 .chat-send:hover{transform:translateY(-1px)}
 .chat-note{margin:10px 2px 0!important;font-size:12px!important;color:var(--ash)}
+.tabs{display:flex;gap:8px;margin:0 0 22px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:14px;font-weight:600;color:var(--ash);background:none;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 20px;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.tabs button[aria-selected=true]{color:#fff;background:var(--iris);border-color:var(--iris)}
+.tabs button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.pr-panel[hidden]{display:none}
+.pr-chat{max-width:640px}
 .chat-note a{color:var(--saffron);text-decoration:underline;text-underline-offset:2px}
 @media(max-width:860px){.cta-grid{grid-template-columns:minmax(0,1fr)}}
 
@@ -433,7 +439,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
       <a class="ghost" href="/ru/biznes">Бизнес</a>
       <a class="ghost" href="/ru/psixologiya">Психология</a>
       <a class="ghost" href="/ru/teqdimat">Портфолио</a>
-      <a class="ghost opt" href="/ru/promt" aria-current="page">Создать промпт</a>
+      <a class="ghost opt" href="/ru/promt" aria-current="page">AZE AI</a>
       <a class="ghost opt" href="/ru/#elaqe">Контакты</a>
     </nav>
     <div class="nav-end">
@@ -448,14 +454,34 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="hero short" aria-labelledby="h1" style="min-height:0">
     <div class="wrap" style="grid-template-columns:1fr">
       <div>
-        <span class="label"><span class="sgn" lang="en">Security Group</span> · AI-промпт</span>
-        <h1 id="h1"><span class="w" style="--i:0"><span>Генератор</span></span> <span class="w" style="--i:1"><span><em>AI-промптов.</em></span></span></h1>
-        <p class="lead">Опишите идею в одном-двух предложениях. ИИ соберёт промпт со структурой, контекстом, форматом и ограничениями.</p>
+        <span class="label"><span class="sgn" lang="en">Security Group</span> · AZE AI</span>
+        <h1 id="h1"><span class="w" style="--i:0"><span>AZE</span></span> <span class="w" style="--i:1"><span><em>AI.</em></span></span></h1>
+        <p class="lead">Поговорите с ИИ о наших готовых программах или превратите идею в промпт.</p>
       </div>
     </div>
   </section>
   <section class="pr" aria-label="Генератор промптов">
     <div class="wrap">
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-chat" aria-selected="true" aria-controls="panel-chat">Поговорить с ИИ</button>
+        <button type="button" role="tab" id="tab-pr" aria-selected="false" aria-controls="panel-pr">Создать промпт</button>
+      </div>
+      <div class="pr-panel pr-chat" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat">
+      <form class="chat" data-aichat data-busy="Печатает…" data-err="Ответ не получен. Попробуйте позже или напишите в WhatsApp." data-rate="Слишком много запросов. Попробуйте через несколько минут или напишите в WhatsApp." data-wa="Здравствуйте, пишу с сайта aze-ai.az. Хочу получить информацию о программе." data-wahead="Здравствуйте, пишу из чата на сайте aze-ai.az." action="https://wa.me/994552107111" method="get" target="_blank" aria-label="Переписка с Security Group">
+        <div class="chat-head"><img src="/mascot-logo.webp" width="32" height="32" alt=""><div><strong><span class="sgn" lang="en">Security Group</span></strong><span>ИИ-помощник · о готовых работах</span></div></div>
+        <div class="chat-log" role="log" aria-live="polite">
+          <p class="msg in">Здравствуйте! Я ИИ-помощник AZE AI. Спрашивайте о наших готовых программах. Мы также можем сделать программу и веб-решение под ваши задачи, напишите, что нужно.</p>
+        </div>
+        <div class="chat-quick"><button type="button" data-q="Какие у вас есть готовые программы?">Какие есть программы?</button><button type="button" data-q="Что вы предлагаете для психологического центра?">Для психологов</button><button type="button" data-q="Можете ли вы сделать программу с нуля под мою работу?">Свой проект</button></div>
+        <div class="chat-box">
+          <label class="sr" for="aichat-in">Ваше сообщение</label>
+          <textarea id="aichat-in" name="text" rows="1" maxlength="600" placeholder="Напишите вопрос…" required></textarea>
+          <button class="chat-send" type="submit" aria-label="Отправить"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <p class="chat-note">Отвечает ИИ, возможны ошибки. По цене и срокам <a href="https://wa.me/994552107111?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BF%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20aze-ai.az.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5." target="_blank" rel="noopener noreferrer" data-wa-link>напишите в WhatsApp</a>.</p>
+      </form>
+    </div>
+      <div class="pr-panel" id="panel-pr" role="tabpanel" aria-labelledby="tab-pr" hidden>
       <form id="pr-form" class="pr-form" novalidate data-joke="AZE AI говорит" data-result="Готовый промпт" data-copy="Копировать" data-copied="Скопировано" data-busy="Готовлю..." data-go="Создать промпт" data-e-short="Опишите идею подробнее (минимум 3 символа)." data-e-rate="Слишком много запросов. Попробуйте через несколько минут." data-e-srv="Сервис временно недоступен. Попробуйте чуть позже." data-e-net="Нет соединения. Проверьте интернет.">
         <label class="pr-l" for="pr-idea">Ваша идея</label>
         <textarea id="pr-idea" name="idea" rows="4" maxlength="600" placeholder="Например: пост в Instagram для кафе о новом меню"></textarea>
@@ -474,6 +500,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
         <p class="pr-hint">Вставьте промпт в любой ИИ-инструмент. Ответ придёт на русском языке.</p>
       </form>
       <div id="pr-out" class="pr-out" aria-live="polite"></div>
+      </div>
     </div>
   </section>
   <script src="/promt.js" defer></script>
@@ -668,7 +695,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
       {word: parseFloat(box.dataset.word || '0'), frac: parseFloat(box.dataset.frac || '.7'), ratio: parseFloat(box.dataset.ratio || '.95'), spin: shape === 'galaxy', cycle: shape === 'ai', pulse: box.hasAttribute('data-pulse'), scale: parseFloat(box.dataset.scale || '1')});
   });
 
-  document.querySelectorAll('[data-chat]').forEach(function(f){
+  document.querySelectorAll('[data-aichat]').forEach(function(f){
     var log=f.querySelector('.chat-log'), ta=f.querySelector('textarea'), btn=f.querySelector('.chat-send'), waLink=f.querySelector('[data-wa-link]');
     var hist=[], busy=false;
     function say(cls,t){ var p=document.createElement('p'); p.className='msg '+cls; p.textContent=t; log.appendChild(p); log.scrollTop=log.scrollHeight; return p; }
@@ -694,7 +721,20 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
     ta.addEventListener('input',function(){ ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,120)+'px'; });
     f.addEventListener('submit',function(e){ e.preventDefault(); var t=ta.value; ta.value=''; ta.style.height='auto'; send(t); });
   });
-  document.querySelectorAll('[data-ai]').forEach(function(a){ a.addEventListener('click',function(){ setTimeout(function(){ var t=document.getElementById('chat-in'); if (t) t.focus({preventScroll:true}); },400); }); });
+  document.querySelectorAll('[data-chat]').forEach(function(f){
+    var log=f.querySelector('.chat-log'), ta=f.querySelector('textarea');
+    function say(cls,t){ var p=document.createElement('p'); p.className='msg '+cls; p.textContent=t; log.appendChild(p); log.scrollTop=log.scrollHeight; }
+    f.querySelectorAll('[data-q]').forEach(function(b){ b.addEventListener('click',function(){ ta.value=b.dataset.q; ta.focus(); }); });
+    ta.addEventListener('keydown',function(e){ if (e.key==='Enter' && !e.shiftKey){ e.preventDefault(); f.requestSubmit(); } });
+    ta.addEventListener('input',function(){ ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,120)+'px'; });
+    f.addEventListener('submit',function(e){
+      var t=ta.value.trim(); if (!t){ e.preventDefault(); return; }
+      e.preventDefault();
+      say('out',t); say('in',f.dataset.thanks);
+      window.open('https://wa.me/994552107111?text='+encodeURIComponent(t),'_blank','noopener');
+      ta.value=''; ta.style.height='auto';
+    });
+  });
 
   document.addEventListener('click',function(e){ document.querySelectorAll('details.lang[open]').forEach(function(d){ if (!d.contains(e.target)) d.removeAttribute('open'); }); });
 

@@ -1,4 +1,18 @@
 (function () {
+  var tabs = document.querySelectorAll('[role="tab"]');
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      tabs.forEach(function (o) {
+        var on = o === t;
+        o.setAttribute("aria-selected", on ? "true" : "false");
+        document.getElementById(o.getAttribute("aria-controls")).hidden = !on;
+      });
+    });
+  });
+  if (location.hash === "#prompt") tabs[1] && tabs[1].click();
+})();
+
+(function () {
   var form = document.getElementById("pr-form");
   if (!form) return;
   var d = form.dataset;

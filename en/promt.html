@@ -305,6 +305,12 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .chat-send{flex:none;width:40px;height:40px;border-radius:12px;border:0;background:var(--iris);color:#fff;display:grid;place-items:center;cursor:pointer;transition:transform .2s}
 .chat-send:hover{transform:translateY(-1px)}
 .chat-note{margin:10px 2px 0!important;font-size:12px!important;color:var(--ash)}
+.tabs{display:flex;gap:8px;margin:0 0 22px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:14px;font-weight:600;color:var(--ash);background:none;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 20px;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.tabs button[aria-selected=true]{color:#fff;background:var(--iris);border-color:var(--iris)}
+.tabs button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.pr-panel[hidden]{display:none}
+.pr-chat{max-width:640px}
 .chat-note a{color:var(--saffron);text-decoration:underline;text-underline-offset:2px}
 @media(max-width:860px){.cta-grid{grid-template-columns:minmax(0,1fr)}}
 
@@ -433,7 +439,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
       <a class="ghost" href="/en/biznes">Business</a>
       <a class="ghost" href="/en/psixologiya">Psychology</a>
       <a class="ghost" href="/en/teqdimat">Portfolio</a>
-      <a class="ghost opt" href="/en/promt" aria-current="page">Create a prompt</a>
+      <a class="ghost opt" href="/en/promt" aria-current="page">AZE AI</a>
       <a class="ghost opt" href="/en/#elaqe">Contact</a>
     </nav>
     <div class="nav-end">
@@ -448,14 +454,34 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="hero short" aria-labelledby="h1" style="min-height:0">
     <div class="wrap" style="grid-template-columns:1fr">
       <div>
-        <span class="label"><span class="sgn" lang="en">Security Group</span> · AI prompts</span>
-        <h1 id="h1"><span class="w" style="--i:0"><span>AI</span></span> <span class="w" style="--i:1"><span><em>prompt</em></span></span> <span class="w" style="--i:2"><span>generator.</span></span></h1>
-        <p class="lead">Write your idea in a sentence or two. AI builds the prompt with structure, context, format and constraints.</p>
+        <span class="label"><span class="sgn" lang="en">Security Group</span> · AZE AI</span>
+        <h1 id="h1"><span class="w" style="--i:0"><span>AZE</span></span> <span class="w" style="--i:1"><span><em>AI.</em></span></span></h1>
+        <p class="lead">Talk to AI about our ready-made programs or turn your idea into a prompt.</p>
       </div>
     </div>
   </section>
   <section class="pr" aria-label="Prompt generator">
     <div class="wrap">
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-chat" aria-selected="true" aria-controls="panel-chat">Talk to AI</button>
+        <button type="button" role="tab" id="tab-pr" aria-selected="false" aria-controls="panel-pr">Create a prompt</button>
+      </div>
+      <div class="pr-panel pr-chat" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat">
+      <form class="chat" data-aichat data-busy="Typing…" data-err="No answer received. Try again shortly or write on WhatsApp." data-rate="Too many requests. Try again in a few minutes or write on WhatsApp." data-wa="Hello, I am writing from aze-ai.az. I would like information about software." data-wahead="Hello, I am writing from the chat on aze-ai.az." action="https://wa.me/994552107111" method="get" target="_blank" aria-label="Chat with Security Group">
+        <div class="chat-head"><img src="/mascot-logo.webp" width="32" height="32" alt=""><div><strong><span class="sgn" lang="en">Security Group</span></strong><span>AI assistant · about our ready work</span></div></div>
+        <div class="chat-log" role="log" aria-live="polite">
+          <p class="msg in">Hello! I am the AZE AI assistant. Ask about our ready-made programs. We can also build software and web solutions to fit your needs, so tell us what you need.</p>
+        </div>
+        <div class="chat-quick"><button type="button" data-q="What ready-made programs do you have?">What do you have?</button><button type="button" data-q="What do you offer for a psychology centre?">Psychology tools</button><button type="button" data-q="Can you build software from scratch for my work?">My own project</button></div>
+        <div class="chat-box">
+          <label class="sr" for="aichat-in">Your message</label>
+          <textarea id="aichat-in" name="text" rows="1" maxlength="600" placeholder="Type your question…" required></textarea>
+          <button class="chat-send" type="submit" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <p class="chat-note">Answers come from AI and may contain mistakes. For price and timing <a href="https://wa.me/994552107111?text=Hello%2C%20I%20am%20writing%20from%20aze-ai.az.%20I%20would%20like%20information%20about%20software." target="_blank" rel="noopener noreferrer" data-wa-link>write on WhatsApp</a>.</p>
+      </form>
+    </div>
+      <div class="pr-panel" id="panel-pr" role="tabpanel" aria-labelledby="tab-pr" hidden>
       <form id="pr-form" class="pr-form" novalidate data-joke="AZE AI says" data-result="Your prompt" data-copy="Copy" data-copied="Copied" data-busy="Working..." data-go="Create prompt" data-e-short="Add a bit more detail (at least 3 characters)." data-e-rate="Too many requests. Try again in a few minutes." data-e-srv="The service is temporarily unavailable. Try again shortly." data-e-net="No connection. Check your internet.">
         <label class="pr-l" for="pr-idea">Your idea</label>
         <textarea id="pr-idea" name="idea" rows="4" maxlength="600" placeholder="For example: an Instagram post for a cafe about the new menu"></textarea>
@@ -474,6 +500,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
         <p class="pr-hint">Paste the prompt into any AI tool. The answer will come in English.</p>
       </form>
       <div id="pr-out" class="pr-out" aria-live="polite"></div>
+      </div>
     </div>
   </section>
   <script src="/promt.js" defer></script>
@@ -668,7 +695,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
       {word: parseFloat(box.dataset.word || '0'), frac: parseFloat(box.dataset.frac || '.7'), ratio: parseFloat(box.dataset.ratio || '.95'), spin: shape === 'galaxy', cycle: shape === 'ai', pulse: box.hasAttribute('data-pulse'), scale: parseFloat(box.dataset.scale || '1')});
   });
 
-  document.querySelectorAll('[data-chat]').forEach(function(f){
+  document.querySelectorAll('[data-aichat]').forEach(function(f){
     var log=f.querySelector('.chat-log'), ta=f.querySelector('textarea'), btn=f.querySelector('.chat-send'), waLink=f.querySelector('[data-wa-link]');
     var hist=[], busy=false;
     function say(cls,t){ var p=document.createElement('p'); p.className='msg '+cls; p.textContent=t; log.appendChild(p); log.scrollTop=log.scrollHeight; return p; }
@@ -694,7 +721,20 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
     ta.addEventListener('input',function(){ ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,120)+'px'; });
     f.addEventListener('submit',function(e){ e.preventDefault(); var t=ta.value; ta.value=''; ta.style.height='auto'; send(t); });
   });
-  document.querySelectorAll('[data-ai]').forEach(function(a){ a.addEventListener('click',function(){ setTimeout(function(){ var t=document.getElementById('chat-in'); if (t) t.focus({preventScroll:true}); },400); }); });
+  document.querySelectorAll('[data-chat]').forEach(function(f){
+    var log=f.querySelector('.chat-log'), ta=f.querySelector('textarea');
+    function say(cls,t){ var p=document.createElement('p'); p.className='msg '+cls; p.textContent=t; log.appendChild(p); log.scrollTop=log.scrollHeight; }
+    f.querySelectorAll('[data-q]').forEach(function(b){ b.addEventListener('click',function(){ ta.value=b.dataset.q; ta.focus(); }); });
+    ta.addEventListener('keydown',function(e){ if (e.key==='Enter' && !e.shiftKey){ e.preventDefault(); f.requestSubmit(); } });
+    ta.addEventListener('input',function(){ ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,120)+'px'; });
+    f.addEventListener('submit',function(e){
+      var t=ta.value.trim(); if (!t){ e.preventDefault(); return; }
+      e.preventDefault();
+      say('out',t); say('in',f.dataset.thanks);
+      window.open('https://wa.me/994552107111?text='+encodeURIComponent(t),'_blank','noopener');
+      ta.value=''; ta.style.height='auto';
+    });
+  });
 
   document.addEventListener('click',function(e){ document.querySelectorAll('details.lang[open]').forEach(function(d){ if (!d.contains(e.target)) d.removeAttribute('open'); }); });
 

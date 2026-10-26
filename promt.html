@@ -305,6 +305,12 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .chat-send{flex:none;width:40px;height:40px;border-radius:12px;border:0;background:var(--iris);color:#fff;display:grid;place-items:center;cursor:pointer;transition:transform .2s}
 .chat-send:hover{transform:translateY(-1px)}
 .chat-note{margin:10px 2px 0!important;font-size:12px!important;color:var(--ash)}
+.tabs{display:flex;gap:8px;margin:0 0 22px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:14px;font-weight:600;color:var(--ash);background:none;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 20px;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.tabs button[aria-selected=true]{color:#fff;background:var(--iris);border-color:var(--iris)}
+.tabs button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+.pr-panel[hidden]{display:none}
+.pr-chat{max-width:640px}
 .chat-note a{color:var(--saffron);text-decoration:underline;text-underline-offset:2px}
 @media(max-width:860px){.cta-grid{grid-template-columns:minmax(0,1fr)}}
 
@@ -433,7 +439,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
       <a class="ghost" href="/biznes">Biznes</a>
       <a class="ghost" href="/psixologiya">Psixoloji</a>
       <a class="ghost" href="/teqdimat">Portfolio</a>
-      <a class="ghost opt" href="/promt" aria-current="page">Promt yarat</a>
+      <a class="ghost opt" href="/promt" aria-current="page">AZE AI</a>
       <a class="ghost opt" href="/#elaqe">Əlaqə</a>
     </nav>
     <div class="nav-end">
@@ -448,14 +454,34 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="hero short" aria-labelledby="h1" style="min-height:0">
     <div class="wrap" style="grid-template-columns:1fr">
       <div>
-        <span class="label"><span class="sgn" lang="en">Security Group</span> · AI promt</span>
-        <h1 id="h1"><span class="w" style="--i:0"><span>AI</span></span> <span class="w" style="--i:1"><span><em>promt</em></span></span> <span class="w" style="--i:2"><span>generatoru.</span></span></h1>
-        <p class="lead">Fikrini bir-iki cümləyə yaz. Qalanını AI hazırlayır: struktur, kontekst, format və məhdudiyyətlərlə dolu promt.</p>
+        <span class="label"><span class="sgn" lang="en">Security Group</span> · AZE AI</span>
+        <h1 id="h1"><span class="w" style="--i:0"><span>AZE</span></span> <span class="w" style="--i:1"><span><em>AI.</em></span></span></h1>
+        <p class="lead">Hazır proqramlarımız haqqında AI ilə danış və ya fikrini promta çevir.</p>
       </div>
     </div>
   </section>
   <section class="pr" aria-label="Promt generatoru">
     <div class="wrap">
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-chat" aria-selected="true" aria-controls="panel-chat">AI ilə danış</button>
+        <button type="button" role="tab" id="tab-pr" aria-selected="false" aria-controls="panel-pr">Promt yarat</button>
+      </div>
+      <div class="pr-panel pr-chat" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat">
+      <form class="chat" data-aichat data-busy="Yazır…" data-err="Cavab alınmadı. Bir az sonra yenidən yoxlayın və ya WhatsApp-da yazın." data-rate="Çox sorğu göndərildi. Bir neçə dəqiqə sonra yenidən yoxlayın və ya WhatsApp-da yazın." data-wa="Salam, aze-ai.az saytından yazıram. Proqram haqqında məlumat almaq istəyirəm." data-wahead="Salam, aze-ai.az saytındakı söhbətdən yazıram." action="https://wa.me/994552107111" method="get" target="_blank" aria-label="Security Group ilə yazışma">
+        <div class="chat-head"><img src="/mascot-logo.webp" width="32" height="32" alt=""><div><strong><span class="sgn" lang="en">Security Group</span></strong><span>AI köməkçi · hazır işlər haqqında</span></div></div>
+        <div class="chat-log" role="log" aria-live="polite">
+          <p class="msg in">Salam! Mən AZE AI köməkçisiyəm. Hazır proqramlarımız barədə sual verə bilərsiniz. İstəyinizə uyğun proqram və veb həll də hazırlaya bilərik, nə lazım olduğunu yazın.</p>
+        </div>
+        <div class="chat-quick"><button type="button" data-q="Hansı hazır proqramlarınız var?">Hansı proqramlar var?</button><button type="button" data-q="Psixoloji mərkəz üçün nə təklif edirsiniz?">Psixoloji alətlər</button><button type="button" data-q="Mənim işim üçün sıfırdan proqram hazırlaya bilərsiniz?">Öz layihəm var</button></div>
+        <div class="chat-box">
+          <label class="sr" for="aichat-in">Mesajınız</label>
+          <textarea id="aichat-in" name="text" rows="1" maxlength="600" placeholder="Sualınızı yazın…" required></textarea>
+          <button class="chat-send" type="submit" aria-label="Göndər"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <p class="chat-note">Cavabları AI verir və səhv edə bilər. Qiymət və müddət üçün <a href="https://wa.me/994552107111?text=Salam%2C%20aze-ai.az%20sayt%C4%B1ndan%20yaz%C4%B1ram.%20Proqram%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener noreferrer" data-wa-link>WhatsApp-da yazın</a>.</p>
+      </form>
+    </div>
+      <div class="pr-panel" id="panel-pr" role="tabpanel" aria-labelledby="tab-pr" hidden>
       <form id="pr-form" class="pr-form" novalidate data-joke="AZE AI deyir" data-result="Hazır promt" data-copy="Kopyala" data-copied="Kopyalandı" data-busy="Hazırlanır..." data-go="Promtu yarat" data-e-short="Fikri bir az ətraflı yaz (ən azı 3 simvol)." data-e-rate="Çox sorğu göndərildi. Bir neçə dəqiqə sonra yenidən yoxla." data-e-srv="Xidmət müvəqqəti əlçatmazdır. Bir az sonra yenidən yoxla." data-e-net="Bağlantı alınmadı. İnternetini yoxla.">
         <label class="pr-l" for="pr-idea">Fikrin</label>
         <textarea id="pr-idea" name="idea" rows="4" maxlength="600" placeholder="Məsələn: kafe üçün Instagram paylaşımı, yeni menyu haqqında"></textarea>
@@ -474,6 +500,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
         <p class="pr-hint">Promtu istənilən AI alətinə yapışdırın. Nəticə Azərbaycan dilində gələcək.</p>
       </form>
       <div id="pr-out" class="pr-out" aria-live="polite"></div>
+      </div>
     </div>
   </section>
   <script src="/promt.js" defer></script>
@@ -668,7 +695,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
       {word: parseFloat(box.dataset.word || '0'), frac: parseFloat(box.dataset.frac || '.7'), ratio: parseFloat(box.dataset.ratio || '.95'), spin: shape === 'galaxy', cycle: shape === 'ai', pulse: box.hasAttribute('data-pulse'), scale: parseFloat(box.dataset.scale || '1')});
   });
 
-  document.querySelectorAll('[data-chat]').forEach(function(f){
+  document.querySelectorAll('[data-aichat]').forEach(function(f){
     var log=f.querySelector('.chat-log'), ta=f.querySelector('textarea'), btn=f.querySelector('.chat-send'), waLink=f.querySelector('[data-wa-link]');
     var hist=[], busy=false;
     function say(cls,t){ var p=document.createElement('p'); p.className='msg '+cls; p.textContent=t; log.appendChild(p); log.scrollTop=log.scrollHeight; return p; }
@@ -694,7 +721,20 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
     ta.addEventListener('input',function(){ ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,120)+'px'; });
     f.addEventListener('submit',function(e){ e.preventDefault(); var t=ta.value; ta.value=''; ta.style.height='auto'; send(t); });
   });
-  document.querySelectorAll('[data-ai]').forEach(function(a){ a.addEventListener('click',function(){ setTimeout(function(){ var t=document.getElementById('chat-in'); if (t) t.focus({preventScroll:true}); },400); }); });
+  document.querySelectorAll('[data-chat]').forEach(function(f){
+    var log=f.querySelector('.chat-log'), ta=f.querySelector('textarea');
+    function say(cls,t){ var p=document.createElement('p'); p.className='msg '+cls; p.textContent=t; log.appendChild(p); log.scrollTop=log.scrollHeight; }
+    f.querySelectorAll('[data-q]').forEach(function(b){ b.addEventListener('click',function(){ ta.value=b.dataset.q; ta.focus(); }); });
+    ta.addEventListener('keydown',function(e){ if (e.key==='Enter' && !e.shiftKey){ e.preventDefault(); f.requestSubmit(); } });
+    ta.addEventListener('input',function(){ ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,120)+'px'; });
+    f.addEventListener('submit',function(e){
+      var t=ta.value.trim(); if (!t){ e.preventDefault(); return; }
+      e.preventDefault();
+      say('out',t); say('in',f.dataset.thanks);
+      window.open('https://wa.me/994552107111?text='+encodeURIComponent(t),'_blank','noopener');
+      ta.value=''; ta.style.height='auto';
+    });
+  });
 
   document.addEventListener('click',function(e){ document.querySelectorAll('details.lang[open]').forEach(function(d){ if (!d.contains(e.target)) d.removeAttribute('open'); }); });
 
