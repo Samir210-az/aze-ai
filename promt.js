@@ -71,6 +71,7 @@
         idea: text,
         target: form.elements.target.value,
         tone: form.elements.tone.value,
+        plang: form.elements.plang.value,
         lang: document.documentElement.lang
       })
     })

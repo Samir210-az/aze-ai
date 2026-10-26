@@ -45,7 +45,7 @@ function limited(ip) {
   return false;
 }
 
-function systemPrompt(target, tone, langName) {
+function systemPrompt(target, tone, langName, native) {
   const extra = {
     image: `
 IMAGE RULES: Any text that must appear inside the image (headline, slogan, label, button) must be written by you in ${langName} and shown in straight double quotes inside the prompt, for example: headline text "...". If the user gave no text, invent a short fitting one in ${langName}. End the prompt with this sentence verbatim: "CRITICAL: Do not generate, invent, or add any other words, taglines, subtitles or headers anywhere in the image. Every piece of text in the image must be exactly the quoted ${langName} text above, in no other language."`,
@@ -56,7 +56,7 @@ SHORT VIDEO RULES: Build a ready-to-shoot storyboard with: 1) a hook for the fir
 
 Produce two fields:
 1) "joke": one or two friendly, light-hearted sentences about the user's topic, written in ${langName}. Never insulting.
-2) "prompt": a detailed, professional prompt written in English for ${TARGETS[target]}, in a ${TONES[tone]} tone, with clear structure, context, goal, output format and constraints. The final paragraph of the prompt must tell the target AI that every text answer or any text shown in an image must be written in ${langName} only, without translating it to English. Quote any exact wording the user supplied and add "do not translate this text".${extra}
+2) "prompt": a detailed, professional prompt written in ${native ? langName : "English"} for ${TARGETS[target]}, in a ${TONES[tone]} tone, with clear structure, context, goal, output format and constraints. The final paragraph of the prompt must tell the target AI that every text answer or any text shown in an image must be written in ${langName} only, without translating it to English. Quote any exact wording the user supplied and add "do not translate this text".${extra}
 
 Reply with only one JSON object and nothing else, in this shape: {"joke": "...", "prompt": "..."}`;
 }
@@ -138,7 +138,7 @@ module.exports = async function handler(req, res) {
   }
   if (!providers.length) return res.status(503).json({ error: "config" });
 
-  const system = systemPrompt(target, tone, langName);
+  const system = systemPrompt(target, tone, langName, body.plang === "native");
   const fails = [];
   for (const provider of providers) {
     try {

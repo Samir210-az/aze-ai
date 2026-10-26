@@ -390,6 +390,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
 .pr select option{background:#06211a;color:#fff}
 .pr textarea:focus-visible,.pr select:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 .pr-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.pr-one{grid-template-columns:1fr;margin-top:16px}
 .pr-act{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:24px}
 .pr-act .pill{border:0;cursor:pointer;font-family:inherit}
 .pr-act .pill:disabled{opacity:.6;cursor:wait;transform:none}
@@ -455,6 +456,9 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
         <div class="pr-row">
           <div><label class="pr-l" for="pr-target">Для чего</label><select id="pr-target" name="target"><option value="general">Общий ИИ (ChatGPT, Claude)</option><option value="image">Изображение</option><option value="code">Код</option><option value="video">Видео</option><option value="reels">Reels / TikTok</option><option value="writing">Текст</option></select></div>
           <div><label class="pr-l" for="pr-tone">Тон</label><select id="pr-tone" name="tone"><option value="professional">Профессиональный</option><option value="creative">Креативный</option><option value="simple">Простой</option></select></div>
+        </div>
+        <div class="pr-row pr-one">
+          <div><label class="pr-l" for="pr-plang">Язык промпта</label><select id="pr-plang" name="plang"><option value="en">Английский (точнее результат)</option><option value="native">Русский</option></select></div>
         </div>
         <div class="pr-act">
           <button class="pill" id="pr-go" type="submit">Создать промпт</button>
