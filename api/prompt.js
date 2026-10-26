@@ -76,7 +76,8 @@ async function askModel(provider, system, idea) {
           { role: "user", content: idea },
         ],
         temperature: 0.8,
-        max_tokens: 1100,
+        max_tokens: 2000,
+        ...(provider.name === "groq" ? { reasoning_effort: "low" } : {}),
       }),
     });
     if (!res.ok) throw new Error(`${provider.name} ${res.status}`);
@@ -131,7 +132,7 @@ module.exports = async function handler(req, res) {
 
   const providers = [];
   if (process.env.GROQ_API_KEY) {
-    providers.push({ name: "groq", url: "https://api.groq.com/openai/v1/chat/completions", model: "llama-3.3-70b-versatile", key: process.env.GROQ_API_KEY });
+    providers.push({ name: "groq", url: "https://api.groq.com/openai/v1/chat/completions", model: "openai/gpt-oss-120b", key: process.env.GROQ_API_KEY });
   }
   if (process.env.DEEPSEEK_API_KEY) {
     providers.push({ name: "deepseek", url: "https://api.deepseek.com/chat/completions", model: "deepseek-flash", key: process.env.DEEPSEEK_API_KEY });

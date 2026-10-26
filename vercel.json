@@ -99,6 +99,9 @@
     "api/chat.js": {
       "maxDuration": 30,
       "includeFiles": "api/_kb.json"
+    },
+    "api/groq.js": {
+      "maxDuration": 60
     }
   }
 }
