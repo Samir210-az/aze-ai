@@ -91,5 +91,10 @@
       "source": "/googlee9c7aafff11a9b08.html",
       "destination": "/googlee9c7aafff11a9b08"
     }
-  ]
+  ],
+  "functions": {
+    "api/prompt.js": {
+      "maxDuration": 30
+    }
+  }
 }

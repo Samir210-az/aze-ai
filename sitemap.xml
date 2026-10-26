@@ -109,6 +109,42 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/psixologiya"/>
   </url>
   <url>
+    <loc>https://aze-ai.az/promt</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/promt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/promt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/promt"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/promt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/promt"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/ru/promt</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/promt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/promt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/promt"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/promt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/promt"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/promt</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/promt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/promt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/promt"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/promt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/promt"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/tr/promt</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/promt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aze-ai.az/ru/promt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/promt"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://aze-ai.az/tr/promt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/promt"/>
+  </url>
+  <url>
     <loc>https://aze-ai.az/teqdimat</loc>
     <lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/teqdimat"/>
