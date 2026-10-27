@@ -150,6 +150,9 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 @media(max-width:700px){.pains{grid-template-columns:1fr}}
 @media(max-width:560px){.gains{grid-template-columns:1fr}}
 .vids{--g:clamp(22px,3vw,36px);display:flex;flex-wrap:wrap;justify-content:center;gap:var(--g);padding-block:clamp(10px,3vw,30px) clamp(40px,7vw,90px)}
+.soc{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.soc a{font-size:13px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--saffron);border:1px solid rgba(255,184,41,.55);border-radius:999px;padding:7px 16px;min-height:34px;display:inline-flex;align-items:center;transition:background .25s,color .25s}
+.soc a:hover,.soc a:focus-visible{background:var(--saffron);color:#201400}
 .vf{display:flex;gap:8px;justify-content:center;flex-wrap:nowrap;padding-top:clamp(10px,3vw,30px)}
 .vf button{font:inherit;font-size:12px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;color:var(--saffron);background:transparent;border:1px solid rgba(255,184,41,.55);border-radius:999px;padding:7px 14px;min-height:34px;cursor:pointer;transition:background .25s,color .25s}
 .vf button[aria-pressed="true"]{background:var(--saffron);color:#201400;border-color:var(--saffron)}
@@ -530,6 +533,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
       <div>
         <h2 id="h-cta">Sizin alanınız için de program yazalım mı?</h2>
         <p>Programla neyi yürütmek istediğinizi yazın.</p>
+        <p class="soc"><a href="https://instagram.com/securtiy_group" lang="en" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.tiktok.com/@security_group" lang="en" target="_blank" rel="noopener noreferrer">TikTok</a></p>
       </div>
       <form class="chat" data-chat data-thanks="Teşekkürler! WhatsApp açılıyor, orada gönder düğmesine basın." action="https://wa.me/994552107111" method="get" target="_blank" aria-label="Security Group ile yazışma">
         <div class="chat-head"><img src="/mascot-logo.webp" width="32" height="32" alt=""><div><strong><span class="sgn" lang="en">Security Group</span></strong><span>Mesajınızı buraya yazın</span></div></div>
