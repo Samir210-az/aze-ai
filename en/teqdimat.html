@@ -219,6 +219,14 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .stage img{height:auto;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);position:absolute;left:17%;top:12%;width:66%;border-radius:24px;aspect-ratio:4/5;object-fit:cover;animation:float 8s ease-in-out infinite alternate;pointer-events:none}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,7vw,110px);align-items:center}
+.more{display:inline-block;margin-top:16px;font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--saffron);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.more:hover,.more:focus-visible{color:var(--white)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,90px)}
+.prose{margin:18px 0 0;max-width:52ch;font-size:clamp(17px,1.6vw,19px);line-height:1.6;color:var(--ash)}
+.acc{padding:clamp(26px,4vw,44px);border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(7,22,17,.5)}
+.acc h2{margin:0 0 14px}
+.acc p{margin:0;max-width:60ch;font-size:clamp(17px,1.6vw,19px);line-height:1.6;color:var(--ash)}
+@media(max-width:759px){.two{grid-template-columns:minmax(0,1fr)}}
 .sec{padding-block:clamp(70px,11vw,150px)}
 .numbers{display:grid;gap:clamp(30px,5vw,60px)}
 .num b{display:block;font-weight:400;font-size:clamp(72px,12vw,150px);line-height:.9;letter-spacing:-.06em}
