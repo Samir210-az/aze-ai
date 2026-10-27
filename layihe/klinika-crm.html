@@ -142,7 +142,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .pain-end{margin-top:28px;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.02em;color:var(--white)}
 .gains{list-style:none;margin:clamp(30px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .gains li{padding:26px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(7,22,17,.5)}
-.gains h4{font-size:clamp(24px,2.4vw,30px);font-weight:400;letter-spacing:-.03em;margin:0 0 12px;color:var(--saffron)}
+.gains h4,.gains h3{font-size:clamp(24px,2.4vw,30px);font-weight:400;letter-spacing:-.03em;margin:0 0 12px;color:var(--saffron)}
 .gains p{margin:0;font-size:16px;line-height:1.55;color:var(--ash)}
 @media(max-width:980px){.gains{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.pains{grid-template-columns:1fr}}
@@ -297,7 +297,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .steps{display:grid;gap:0;margin-top:clamp(30px,5vw,60px)}
 .step{display:grid;grid-template-columns:90px 1fr 1.3fr;gap:30px;padding-block:34px;align-items:start}
 .step .n{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--saffron);padding-top:14px}
-.step h4{font-weight:400;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.04em;line-height:1.1}
+.step h4,.step h3{font-weight:400;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.04em;line-height:1.1}
 .step p{color:var(--silver);max-width:46ch}
 
 .cta-sec{padding-block:clamp(80px,12vw,170px) clamp(28px,4vw,56px);text-align:left}
@@ -518,7 +518,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="sec" aria-labelledby="h-feat" style="padding-top:0">
     <div class="wrap">
       <div class="rv"><span class="label">Proqramda nə var</span><h2 id="h-feat">Proqramda nə var</h2></div>
-      <ul class="gains rv"><li><h4>Qəbullar</h4><p>Pasiyent üçün həkimə qəbul yazılır. Resepsiya bugünkü qəbulları və növbədəki pasiyentləri görür.</p></li><li><h4>Pasiyent kartı</h4><p>Pasiyentin məlumatı və keçmiş müayinələri bir yerdə saxlanılır.</p></li><li><h4>Ödənişlər</h4><p>Müayinə üzrə ödənişlər qeyd olunur, gözləyən ödənişlər ayrıca görünür. Həkim üçün qəbul haqqı təyin edilir.</p></li><li><h4>Resept və laborator</h4><p>Həkim resept yazır və analiz sifarişi verir. Laborant gözləyən analizləri öz panelində görür.</p></li><li><h4>İş qrafiki və davamiyyət</h4><p>İşçilərin qrafiki, kioskda adı seçib PIN ilə gəliş-gediş qeydi və məzuniyyət sorğuları.</p></li><li><h4>Daxili mesajlaşma</h4><p>İşçilər arasında yazışma. Oxunmamış mesajların sayı görünür.</p></li><li><h4>Maliyyə və xərclər</h4><p>Bugünkü və aylıq dövriyyə, xərc, əmək haqqı, mükafat və xalis qazanc.</p></li><li><h4>Kadr əmrləri</h4><p>İşçilərlə bağlı əmrlər sistemdə qeyd olunur. Proqram telefona da yüklənir.</p></li></ul>
+      <ul class="gains rv"><li><h3>Qəbullar</h3><p>Pasiyent üçün həkimə qəbul yazılır. Resepsiya bugünkü qəbulları və növbədəki pasiyentləri görür.</p></li><li><h3>Pasiyent kartı</h3><p>Pasiyentin məlumatı və keçmiş müayinələri bir yerdə saxlanılır.</p></li><li><h3>Ödənişlər</h3><p>Müayinə üzrə ödənişlər qeyd olunur, gözləyən ödənişlər ayrıca görünür. Həkim üçün qəbul haqqı təyin edilir.</p></li><li><h3>Resept və laborator</h3><p>Həkim resept yazır və analiz sifarişi verir. Laborant gözləyən analizləri öz panelində görür.</p></li><li><h3>İş qrafiki və davamiyyət</h3><p>İşçilərin qrafiki, kioskda adı seçib PIN ilə gəliş-gediş qeydi və məzuniyyət sorğuları.</p></li><li><h3>Daxili mesajlaşma</h3><p>İşçilər arasında yazışma. Oxunmamış mesajların sayı görünür.</p></li><li><h3>Maliyyə və xərclər</h3><p>Bugünkü və aylıq dövriyyə, xərc, əmək haqqı, mükafat və xalis qazanc.</p></li><li><h3>Kadr əmrləri</h3><p>İşçilərlə bağlı əmrlər sistemdə qeyd olunur. Proqram telefona da yüklənir.</p></li></ul>
       
     </div>
   </section>
@@ -526,7 +526,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="sec" aria-labelledby="h-st" style="padding-top:0">
     <div class="wrap">
       <div class="rv"><span class="label">İş necə gedir</span><h2 id="h-st">İş necə gedir</h2></div>
-      <div class="steps"><div class="step rv"><span class="n">01</span><h4>Giriş</h4><p>Hər işçi telefon nömrəsi və PIN ilə daxil olur. Rola uyğun panel açılır.</p></div><div class="step rv"><span class="n">02</span><h4>Qəbul</h4><p>Resepsiya pasiyenti qeyd edir və həkimə yazır.</p></div><div class="step rv"><span class="n">03</span><h4>Müayinə</h4><p>Həkim müayinə aparır, resept və ya analiz təyin edir.</p></div><div class="step rv"><span class="n">04</span><h4>Hesab</h4><p>Ödəniş qeyd olunur, gün və ay üzrə dövriyyə mühasib və direktor panelində görünür.</p></div></div>
+      <div class="steps"><div class="step rv"><span class="n">01</span><h3>Giriş</h3><p>Hər işçi telefon nömrəsi və PIN ilə daxil olur. Rola uyğun panel açılır.</p></div><div class="step rv"><span class="n">02</span><h3>Qəbul</h3><p>Resepsiya pasiyenti qeyd edir və həkimə yazır.</p></div><div class="step rv"><span class="n">03</span><h3>Müayinə</h3><p>Həkim müayinə aparır, resept və ya analiz təyin edir.</p></div><div class="step rv"><span class="n">04</span><h3>Hesab</h3><p>Ödəniş qeyd olunur, gün və ay üzrə dövriyyə mühasib və direktor panelində görünür.</p></div></div>
     </div>
   </section>
 

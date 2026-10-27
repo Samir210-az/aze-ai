@@ -142,7 +142,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .pain-end{margin-top:28px;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.02em;color:var(--white)}
 .gains{list-style:none;margin:clamp(30px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .gains li{padding:26px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(7,22,17,.5)}
-.gains h4{font-size:clamp(24px,2.4vw,30px);font-weight:400;letter-spacing:-.03em;margin:0 0 12px;color:var(--saffron)}
+.gains h4,.gains h3{font-size:clamp(24px,2.4vw,30px);font-weight:400;letter-spacing:-.03em;margin:0 0 12px;color:var(--saffron)}
 .gains p{margin:0;font-size:16px;line-height:1.55;color:var(--ash)}
 @media(max-width:980px){.gains{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.pains{grid-template-columns:1fr}}
@@ -297,7 +297,7 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .steps{display:grid;gap:0;margin-top:clamp(30px,5vw,60px)}
 .step{display:grid;grid-template-columns:90px 1fr 1.3fr;gap:30px;padding-block:34px;align-items:start}
 .step .n{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--saffron);padding-top:14px}
-.step h4{font-weight:400;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.04em;line-height:1.1}
+.step h4,.step h3{font-weight:400;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.04em;line-height:1.1}
 .step p{color:var(--silver);max-width:46ch}
 
 .cta-sec{padding-block:clamp(80px,12vw,170px) clamp(28px,4vw,56px);text-align:left}
@@ -518,7 +518,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="sec" aria-labelledby="h-feat" style="padding-top:0">
     <div class="wrap">
       <div class="rv"><span class="label">Proqramda nə var</span><h2 id="h-feat">Proqramda nə var</h2></div>
-      <ul class="gains rv"><li><h4>20 sual</h4><p>Hər sual üçün yalnız &quot;bəli&quot; və ya &quot;xeyr&quot; cavabı seçilir. Aralıq cavab yoxdur.</p></li><li><h4>Kritik suallar</h4><p>8 sual xüsusi diqqət tələb edən kimi işarələnir.</p></li><li><h4>Avtomatik bal</h4><p>20 sual cavablandırıldıqdan sonra bal hesablanır.</p></li><li><h4>Risk səviyyəsi</h4><p>0-2 aşağı, 3-7 orta, 8-20 yüksək risk. Hər səviyyə üçün növbəti addım yazılır.</p></li><li><h4>3 dil</h4><p>Azərbaycan, rus və ingilis dilində.</p></li><li><h4>Uşaq məlumatı</h4><p>Uşağın adı, yaşı (ay), cinsi, müayinə tarixi və mütəxəssisin adı nəticə sənədinə yazılır.</p></li><li><h4>Çap</h4><p>Nəticəni çap edib arxivə əlavə etmək olur.</p></li><li><h4>Qaydalar səhifəsi</h4><p>Testin keçirilmə qaydası addım-addım yazılıb.</p></li></ul>
+      <ul class="gains rv"><li><h3>20 sual</h3><p>Hər sual üçün yalnız &quot;bəli&quot; və ya &quot;xeyr&quot; cavabı seçilir. Aralıq cavab yoxdur.</p></li><li><h3>Kritik suallar</h3><p>8 sual xüsusi diqqət tələb edən kimi işarələnir.</p></li><li><h3>Avtomatik bal</h3><p>20 sual cavablandırıldıqdan sonra bal hesablanır.</p></li><li><h3>Risk səviyyəsi</h3><p>0-2 aşağı, 3-7 orta, 8-20 yüksək risk. Hər səviyyə üçün növbəti addım yazılır.</p></li><li><h3>3 dil</h3><p>Azərbaycan, rus və ingilis dilində.</p></li><li><h3>Uşaq məlumatı</h3><p>Uşağın adı, yaşı (ay), cinsi, müayinə tarixi və mütəxəssisin adı nəticə sənədinə yazılır.</p></li><li><h3>Çap</h3><p>Nəticəni çap edib arxivə əlavə etmək olur.</p></li><li><h3>Qaydalar səhifəsi</h3><p>Testin keçirilmə qaydası addım-addım yazılıb.</p></li></ul>
       <p class="note rv">M-CHAT-R skrininq alətidir, diaqnoz deyil. Yüksək bal autizm diaqnozu demək deyil, ətraflı diaqnostik qiymətləndirmə tələb edir. Son qərarı lisenziyalı mütəxəssis verir.</p>
     </div>
   </section>
@@ -526,7 +526,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
   <section class="sec" aria-labelledby="h-st" style="padding-top:0">
     <div class="wrap">
       <div class="rv"><span class="label">Necə işləyir</span><h2 id="h-st">Necə işləyir</h2></div>
-      <div class="steps"><div class="step rv"><span class="n">01</span><h4>Giriş</h4><p>Mütəxəssis telefon nömrəsi və PIN ilə qeydiyyatdan keçir. Hesab təsdiqdən sonra aktivləşir.</p></div><div class="step rv"><span class="n">02</span><h4>Uşaq məlumatı</h4><p>Adı, yaşı, cinsi və müayinə tarixi yazılır.</p></div><div class="step rv"><span class="n">03</span><h4>20 sual</h4><p>Uşağın tipik davranışına görə hər suala bəli və ya xeyr seçilir.</p></div><div class="step rv"><span class="n">04</span><h4>Nəticə</h4><p>Bal, risk səviyyəsi və növbəti addım göstərilir, çap etmək olur.</p></div></div>
+      <div class="steps"><div class="step rv"><span class="n">01</span><h3>Giriş</h3><p>Mütəxəssis telefon nömrəsi və PIN ilə qeydiyyatdan keçir. Hesab təsdiqdən sonra aktivləşir.</p></div><div class="step rv"><span class="n">02</span><h3>Uşaq məlumatı</h3><p>Adı, yaşı, cinsi və müayinə tarixi yazılır.</p></div><div class="step rv"><span class="n">03</span><h3>20 sual</h3><p>Uşağın tipik davranışına görə hər suala bəli və ya xeyr seçilir.</p></div><div class="step rv"><span class="n">04</span><h3>Nəticə</h3><p>Bal, risk səviyyəsi və növbəti addım göstərilir, çap etmək olur.</p></div></div>
     </div>
   </section>
 
