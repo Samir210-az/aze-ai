@@ -320,4 +320,606 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/course-portal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/kurs-portali"/>
   </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/bizim-ofis</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/bizim-ofis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/bizim-ofis-erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/bizim-ofis"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/bizim-ofis-erp</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/bizim-ofis"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/bizim-ofis-erp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/bizim-ofis"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/emlak-crm</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/emlak-crm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/real-estate-crm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/emlak-crm"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/real-estate-crm</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/emlak-crm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/real-estate-crm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/emlak-crm"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/autocar-icare</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/autocar-icare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/autocar-car-rental"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/autocar-icare"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/autocar-car-rental</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/autocar-icare"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/autocar-car-rental"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/autocar-icare"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/sened-koemekcisi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sened-koemekcisi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/document-assistant"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sened-koemekcisi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/document-assistant</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sened-koemekcisi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/document-assistant"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sened-koemekcisi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/tender-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/tender-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/tender-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/tender-ai"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/tender-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/tender-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/tender-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/tender-ai"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/azsource-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/azsource-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/azsource-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/azsource-ai"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/azsource-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/azsource-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/azsource-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/azsource-ai"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/toy-zal-rezervasiyasi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/toy-zal-rezervasiyasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/wedding-hall-booking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/toy-zal-rezervasiyasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/wedding-hall-booking</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/toy-zal-rezervasiyasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/wedding-hall-booking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/toy-zal-rezervasiyasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/restoran-platformasi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/restoran-platformasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/restaurant-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/restoran-platformasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/restaurant-platform</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/restoran-platformasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/restaurant-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/restoran-platformasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/sirniyyat-crm</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sirniyyat-crm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/pastry-shop-crm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sirniyyat-crm"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/pastry-shop-crm</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sirniyyat-crm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/pastry-shop-crm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sirniyyat-crm"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/freelan-az</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/freelan-az"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/freelan-az"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/freelan-az"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/freelan-az</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/freelan-az"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/freelan-az"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/freelan-az"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/market-pos</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/market-pos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/market-pos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/market-pos"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/market-pos</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/market-pos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/market-pos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/market-pos"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/gozellik-salonu</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/gozellik-salonu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/beauty-salon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/gozellik-salonu"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/beauty-salon</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/gozellik-salonu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/beauty-salon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/gozellik-salonu"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/agilli-ariqlama</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/agilli-ariqlama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/smart-weight-loss"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/agilli-ariqlama"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/smart-weight-loss</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/agilli-ariqlama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/smart-weight-loss"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/agilli-ariqlama"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/promt-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/promt-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/promt-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/promt-ai"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/promt-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/promt-ai"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/promt-ai"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/promt-ai"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/ferdinet-provayder</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ferdinet-provayder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ferdinet-isp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ferdinet-provayder"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/ferdinet-isp</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ferdinet-provayder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ferdinet-isp"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ferdinet-provayder"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/ozel-su-sifaris</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ozel-su-sifaris"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ozel-su-delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ozel-su-sifaris"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/ozel-su-delivery</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ozel-su-sifaris"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ozel-su-delivery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ozel-su-sifaris"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/366-auto</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/366-auto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/366-auto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/366-auto"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/366-auto</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/366-auto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/366-auto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/366-auto"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/elektronika-maqazasi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/elektronika-maqazasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/electronics-store"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/elektronika-maqazasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/electronics-store</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/elektronika-maqazasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/electronics-store"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/elektronika-maqazasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/hollywood-restoran-paneli</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/hollywood-restoran-paneli"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/hollywood-restaurant-panel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/hollywood-restoran-paneli"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/hollywood-restaurant-panel</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/hollywood-restoran-paneli"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/hollywood-restaurant-panel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/hollywood-restoran-paneli"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/sayt-yaradici</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sayt-yaradici"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/website-builder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sayt-yaradici"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/website-builder</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sayt-yaradici"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/website-builder"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sayt-yaradici"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/aba-terapiya</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/aba-terapiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/aba-therapy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/aba-terapiya"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/aba-therapy</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/aba-terapiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/aba-therapy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/aba-terapiya"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/ai-test-sorgular</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ai-test-sorgular"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ai-self-assessment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ai-test-sorgular"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/ai-self-assessment</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ai-test-sorgular"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ai-self-assessment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ai-test-sorgular"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/test-ve-kurs-kataloqu</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/test-ve-kurs-kataloqu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/test-and-course-catalogue"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/test-ve-kurs-kataloqu"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/test-and-course-catalogue</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/test-ve-kurs-kataloqu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/test-and-course-catalogue"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/test-ve-kurs-kataloqu"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/diaqnostik-qiymetlendirme</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/diaqnostik-qiymetlendirme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/diagnostic-assessment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/diaqnostik-qiymetlendirme"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/diagnostic-assessment</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/diaqnostik-qiymetlendirme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/diagnostic-assessment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/diaqnostik-qiymetlendirme"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/gobdo-2-hesablayici</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/gobdo-2-hesablayici"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/gobdo-2-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/gobdo-2-hesablayici"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/gobdo-2-calculator</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/gobdo-2-hesablayici"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/gobdo-2-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/gobdo-2-hesablayici"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/ferdi-reabilitasiya-plani</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ferdi-reabilitasiya-plani"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/individual-rehabilitation-plan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ferdi-reabilitasiya-plani"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/individual-rehabilitation-plan</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ferdi-reabilitasiya-plani"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/individual-rehabilitation-plan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ferdi-reabilitasiya-plani"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/terapiya-jurnali</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/terapiya-jurnali"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/therapy-journal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/terapiya-jurnali"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/therapy-journal</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/terapiya-jurnali"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/therapy-journal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/terapiya-jurnali"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/ttap-professional-plus</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ttap-professional-plus"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ttap-professional-plus"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ttap-professional-plus"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/ttap-professional-plus</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/ttap-professional-plus"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/ttap-professional-plus"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/ttap-professional-plus"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/cbt-klinik-qiymetlendirme</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/cbt-klinik-qiymetlendirme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/cbt-clinical-assessment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/cbt-klinik-qiymetlendirme"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/cbt-clinical-assessment</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/cbt-klinik-qiymetlendirme"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/cbt-clinical-assessment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/cbt-klinik-qiymetlendirme"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/xidmet-paketleri</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/xidmet-paketleri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/service-packages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/xidmet-paketleri"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/service-packages</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/xidmet-paketleri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/service-packages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/xidmet-paketleri"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/icma-inteqrasiya-ve-uzaqdan-destek</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/icma-inteqrasiya-ve-uzaqdan-destek"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/community-inclusion-and-remote-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/icma-inteqrasiya-ve-uzaqdan-destek"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/community-inclusion-and-remote-support</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/icma-inteqrasiya-ve-uzaqdan-destek"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/community-inclusion-and-remote-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/icma-inteqrasiya-ve-uzaqdan-destek"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/denver-ii-inkisaf-skrininqi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/denver-ii-inkisaf-skrininqi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/denver-ii-developmental-screening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/denver-ii-inkisaf-skrininqi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/denver-ii-developmental-screening</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/denver-ii-inkisaf-skrininqi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/denver-ii-developmental-screening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/denver-ii-inkisaf-skrininqi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/inkisaf-rotasi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/inkisaf-rotasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/development-route"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/inkisaf-rotasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/development-route</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/inkisaf-rotasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/development-route"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/inkisaf-rotasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/erken-mudaxile-platformasi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/erken-mudaxile-platformasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/early-intervention-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/erken-mudaxile-platformasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/early-intervention-platform</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/erken-mudaxile-platformasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/early-intervention-platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/erken-mudaxile-platformasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/valideyn-reabilitasiya-beledci</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/valideyn-reabilitasiya-beledci"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/parent-rehabilitation-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/valideyn-reabilitasiya-beledci"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/parent-rehabilitation-guide</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/valideyn-reabilitasiya-beledci"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/parent-rehabilitation-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/valideyn-reabilitasiya-beledci"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/scared-narahatliq-skrininqi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/scared-narahatliq-skrininqi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/scared-anxiety-screening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/scared-narahatliq-skrininqi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/scared-anxiety-screening</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/scared-narahatliq-skrininqi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/scared-anxiety-screening"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/scared-narahatliq-skrininqi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/neurocbt-klinik</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/neurocbt-klinik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/neurocbt-clinical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/neurocbt-klinik"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/neurocbt-clinical</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/neurocbt-klinik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/neurocbt-clinical"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/neurocbt-klinik"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/sesim-unsiyyet-kartlari</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sesim-unsiyyet-kartlari"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/sesim-communication-cards"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sesim-unsiyyet-kartlari"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/sesim-communication-cards</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/sesim-unsiyyet-kartlari"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/sesim-communication-cards"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/sesim-unsiyyet-kartlari"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/usaq-psixologiyasi-agenti</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/usaq-psixologiyasi-agenti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/child-psychology-agent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/usaq-psixologiyasi-agenti"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/child-psychology-agent</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/usaq-psixologiyasi-agenti"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/child-psychology-agent"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/usaq-psixologiyasi-agenti"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/merkez-melumat-bazasi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/merkez-melumat-bazasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/centre-database"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/merkez-melumat-bazasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/centre-database</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/merkez-melumat-bazasi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/centre-database"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/merkez-melumat-bazasi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/mektebe-hazirliq-portali</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/mektebe-hazirliq-portali"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/school-readiness-portal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/mektebe-hazirliq-portali"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/school-readiness-portal</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/mektebe-hazirliq-portali"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/school-readiness-portal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/mektebe-hazirliq-portali"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/rus-dili-tedris-proqrami</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/rus-dili-tedris-proqrami"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/russian-language-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/rus-dili-tedris-proqrami"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/russian-language-course</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/rus-dili-tedris-proqrami"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/russian-language-course"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/rus-dili-tedris-proqrami"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/layihe/klinika-idareetme-sistemi</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/klinika-idareetme-sistemi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/clinic-management-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/klinika-idareetme-sistemi"/>
+  </url>
+  <url>
+    <loc>https://aze-ai.az/en/projects/clinic-management-system</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="az" href="https://aze-ai.az/layihe/klinika-idareetme-sistemi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aze-ai.az/en/projects/clinic-management-system"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aze-ai.az/layihe/klinika-idareetme-sistemi"/>
+  </url>
 </urlset>
