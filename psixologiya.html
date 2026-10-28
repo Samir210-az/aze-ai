@@ -196,6 +196,11 @@ html[lang=ru] .hero:not(.short) h1,html[lang=en] .hero:not(.short) h1{font-size:
 .adm-row button,.adm-out{font:inherit;font-size:14px;color:var(--white);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:7px 11px;cursor:pointer}
 .adm-row button:hover,.adm-out:hover{background:rgba(255,255,255,.16)}
 .adm-out{margin-top:18px}
+.adm-stat{display:grid;grid-template-columns:1fr 64px 64px;gap:6px;align-items:baseline;padding:8px 0;border-top:1px solid rgba(255,255,255,.1);font-size:15px}
+.adm-stat span{overflow-wrap:anywhere}.adm-stat b{text-align:right;font-weight:600}.adm-stat em{text-align:right;font-style:normal;color:var(--ash)}
+.adm h4{font-size:14px;margin:18px 0 6px;color:var(--saffron);letter-spacing:.04em;text-transform:uppercase}
+.adm-own{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:14.5px;color:var(--ash);cursor:pointer}
+.adm-own input{width:20px;height:20px;accent-color:var(--saffron)}
 .progress{position:fixed;left:0;top:0;right:0;height:2px;z-index:60}
 .progress i{display:block;height:100%;background:var(--iris);transform:scaleX(0);transform-origin:left}
 
@@ -869,6 +874,7 @@ footer .sg:hover{text-decoration:underline;text-underline-offset:4px}
 </script>
 <script>window.AZE_FB={"db": "https://aze-ai-edc41-default-rtdb.europe-west1.firebasedatabase.app", "key": "AIzaSyDoPiDvCs3bOq4q4mPivGMRLq6annLZoog"};</script>
 <script src="/admin.js" defer></script>
+<script src="/hit.js" defer></script>
 <a class="fab" href="/promt" aria-label="AZE AI"><img src="/mascot-chip.webp" width="144" height="128" alt="" decoding="async"><span>AZE AI</span></a>
 </body>
 </html>

@@ -140,9 +140,9 @@
       .then(function(j){ return saveSession(j).t; })
       .catch(function(){ try { sessionStorage.removeItem(SKEY); } catch(e){} throw new Error('auth'); });
   }
-  function api(method, path, body){
+  function api(method, path, body, query){
     return token().then(function(t){
-      return fetch(DB + path + '.json?auth=' + encodeURIComponent(t), {method:method, headers:{'Content-Type':'application/json'}, body:body !== undefined ? JSON.stringify(body) : undefined});
+      return fetch(DB + path + '.json?' + (query ? query + '&' : '') + 'auth=' + encodeURIComponent(t), {method:method, headers:{'Content-Type':'application/json'}, body:body !== undefined ? JSON.stringify(body) : undefined});
     }).then(function(r){ if (!r.ok) throw new Error(r.status === 401 || r.status === 403 ? 'perm' : 'db'); return r.json(); });
   }
 
@@ -285,9 +285,65 @@
       }).catch(fail).then(function(){ btn.disabled = false; });
     });
     var out = el('button', {type:'button', 'class':'adm-out', text:'Çıxış', onclick:function(){ try { sessionStorage.removeItem(SKEY); } catch(e){} close(); }});
-    shell('Portfolio videoları', [f, el('h3', {text:'Siyahı'}), list, out]);
+    shell('Portfolio videoları', [f, el('h3', {text:'Siyahı'}), list, el('h3', {text:'Statistika'}), statsBox(), out]);
     url.focus();
     refresh();
+  }
+
+  function statsBox(){
+    var box = el('div', {'class':'adm-stats'});
+    var own = el('input', {type:'checkbox', id:'adm-own'});
+    try { own.checked = localStorage.getItem('aze_nohit') === '1'; } catch(e){}
+    own.addEventListener('change', function(){
+      try { if (own.checked) localStorage.setItem('aze_nohit', '1'); else localStorage.removeItem('aze_nohit'); } catch(e){}
+    });
+    var ownRow = el('label', {'class':'adm-own', 'for':'adm-own'}, [own, el('span', {text:'Bu cihazı hesaba alma'})]);
+    var body = el('div', {}, [el('p', {'class':'adm-note', text:'Yüklənir...'})]);
+    box.appendChild(body);
+    box.appendChild(ownRow);
+    api('GET', '/stats/d', undefined, 'orderBy=%22%24key%22&limitToLast=30').then(function(d){
+      drawStats(body, d || {});
+    }).catch(function(){
+      body.textContent = '';
+      body.appendChild(el('p', {'class':'adm-note', text:'Statistika yüklənmədi.'}));
+    });
+    return box;
+  }
+
+  function drawStats(box, days){
+    box.textContent = '';
+    var keys = Object.keys(days).sort();
+    if (!keys.length){ box.appendChild(el('p', {'class':'adm-note', text:'Hələ məlumat yoxdur.'})); return; }
+    var stamp = function(offset){ return new Date(Date.now() + 4 * 36e5 - offset * 864e5).toISOString().slice(0, 10); };
+    var today = stamp(0), week = stamp(6), month = stamp(29);
+    var sum = {t:[0,0], w:[0,0], m:[0,0]}, cc = {}, pg = {};
+    keys.forEach(function(k){
+      if (k < month) return;
+      var d = days[k] || {}, v = d.v || 0, s = d.s || 0;
+      sum.m[0] += v; sum.m[1] += s;
+      if (k >= week){ sum.w[0] += v; sum.w[1] += s; }
+      if (k === today){ sum.t[0] += v; sum.t[1] += s; }
+      Object.keys(d.c || {}).forEach(function(c){ cc[c] = (cc[c] || 0) + d.c[c]; });
+      Object.keys(d.p || {}).forEach(function(p){ pg[p] = (pg[p] || 0) + d.p[p]; });
+    });
+    var row = function(a, b, c){ return el('div', {'class':'adm-stat'}, [el('span', {text:a}), el('b', {text:String(b)}), el('em', {text:c === undefined ? '' : String(c)})]); };
+    box.appendChild(row('', 'Baxış', 'Ziyarət'));
+    box.appendChild(row('Bu gün', sum.t[0], sum.t[1]));
+    box.appendChild(row('Son 7 gün', sum.w[0], sum.w[1]));
+    box.appendChild(row('Son 30 gün', sum.m[0], sum.m[1]));
+    var names = null;
+    try { names = new Intl.DisplayNames(['az'], {type:'region'}); } catch(e){}
+    var top = function(map, n){ return Object.keys(map).sort(function(a, b){ return map[b] - map[a]; }).slice(0, n); };
+    box.appendChild(el('h4', {text:'Ölkələr (30 gün)'}));
+    top(cc, 8).forEach(function(c){
+      var label = c; try { if (names) label = names.of(c) || c; } catch(e){}
+      box.appendChild(row(label, cc[c]));
+    });
+    if (!Object.keys(cc).length) box.appendChild(el('p', {'class':'adm-note', text:'Ölkə məlumatı yoxdur.'}));
+    box.appendChild(el('h4', {text:'Ən çox baxılan səhifələr (30 gün)'}));
+    top(pg, 10).forEach(function(p){
+      box.appendChild(row(p.replace(/~/g, '/') === '/' ? '/' : p.replace(/~/g, '/'), pg[p]));
+    });
   }
 
   function hookLogo(){
