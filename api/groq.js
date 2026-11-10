@@ -5,6 +5,8 @@ const ALLOWED_ORIGINS = new Set([
   "https://www.aze-ai.az",
 ]);
 
+const isAllowed = (o) => ALLOWED_ORIGINS.has(o) || /^https:\/\/[a-z0-9-]+\.aze-ai\.az$/.test(o);
+
 const MODELS = new Set(["openai/gpt-oss-120b"]);
 const MAX_TOKENS = 8000;
 const MAX_CHARS = 60000;
@@ -36,7 +38,7 @@ module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("X-Content-Type-Options", "nosniff");
   res.setHeader("Vary", "Origin");
-  if (ALLOWED_ORIGINS.has(origin)) {
+  if (isAllowed(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -47,7 +49,7 @@ module.exports = async function handler(req, res) {
     res.setHeader("Allow", "POST, OPTIONS");
     return res.status(405).json({ error: "method" });
   }
-  if (!ALLOWED_ORIGINS.has(origin)) return res.status(403).json({ error: "origin" });
+  if (!isAllowed(origin)) return res.status(403).json({ error: "origin" });
 
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   if (limited(ip)) {
